@@ -4,7 +4,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="mt-3 pb-[800px]">
+    <nav className="">
       <div className="justify-center">
         <ul className="text-md flex space-x-5 text-center justify-center">
           <li className="hover:text-gray-950 text-gray-600">
