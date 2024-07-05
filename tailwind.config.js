@@ -12,6 +12,13 @@ module.exports = {
       animation: {
         float: "float 3s ease-in-out infinite",
       },
+      colors: {
+        'text': '#fff',
+        'primary': '#576cbc',
+        'secondary': '#19376d',
+        'dark': '#0b2447',
+        'bg': '#04152d',
+      },
     },
   },
   plugins: [],

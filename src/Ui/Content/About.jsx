@@ -3,13 +3,14 @@ import Rafi from "../../assets/Images/logo.png";
 import Rea from "../../assets/Images/Rea.png";
 import Profile from "../../assets/Images/Rafi.png";
 import { GoDownload } from "react-icons/go";
+import Javascript from "../../assets/Images/javascript.png";
+import Tailwindcss from "../../assets/Images/tailwind.png";
 
 const technologies = [
-  { name: "ReactJS", logo: Rea },
-  { name: "NextJS", logo: "nextjs-logo-url" },
-  { name: "Tailwind CSS", logo: "tailwind-logo-url" },
-  { name: "JavaScript", logo: "javascript-logo-url" },
-
+  { name: "ReactJS", logo: Rea, url: "https://reactjs.org" },
+  { name: "NextJS", logo: "nextjs-logo-url", url: "https://nextjs.org" },
+  { name: "Tailwind CSS", logo: Tailwindcss, url: "https://tailwindcss.com" },
+  { name: "JavaScript", logo: Javascript, url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
 ];
 
 export default function About(props) {
@@ -41,27 +42,30 @@ export default function About(props) {
       </div>
       <div className="relative mt-10 flex flex-col items-center ">
         <img
-          className=" w-60 h-60 md:w-96 md:h-96 animate-float" // Responsive size
+          className="w-60 h-60 md:w-96 md:h-96" // Responsive size
           src={Profile}
           alt="Profile"
         />
         {technologies.map((tech, index) => {
-          const isLeft = index < 2; // First three on the left
+          const isLeft = index < 2; // First two on the left
           const position = isLeft
-            ? "left-0 md:-left-5"
-            : "right-0 md:-right-5"; // Adjust position for responsiveness
+            ? "left-0 md:-left-20"
+            : "right-0 md:-right-32"; // Adjust position for responsiveness
           return (
-            <div
+            <a
               key={index}
-              className={`absolute flex items-center p-2 bg-white shadow-lg rounded-full ${position}`}
+              href={tech.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`absolute animate-float flex items-center p-2 bg-white shadow-lg rounded-full ${position}`}
               style={{
-                top: `${(index % 2) * 30 + 30}%`, // Adjust vertical position
+                top: `${(index % 2) * 40 + 20}%`, // Adjust vertical position
                 transform: isLeft ? "translateX(-100%)" : "translateX(100%)",
               }}
             >
-              <img className="w-8 h-8 mx-1" src={tech.logo} alt={tech.name} />
-              <span className="font-medium mr-4">{tech.name}</span>
-            </div>
+              <img className="w-6 h-6 md:w-8 md:h-8 mx-1 cursor-pointer" src={tech.logo} alt={tech.name} />
+              <span className="text-xs md:text-sm font-medium mr-2 md:mr-4">{tech.name}</span>
+            </a>
           );
         })}
       </div>
