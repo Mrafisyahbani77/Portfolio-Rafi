@@ -10,7 +10,11 @@ const technologies = [
   { name: "ReactJS", logo: Rea, url: "https://reactjs.org" },
   { name: "NextJS", logo: "nextjs-logo-url", url: "https://nextjs.org" },
   { name: "Tailwind CSS", logo: Tailwindcss, url: "https://tailwindcss.com" },
-  { name: "JavaScript", logo: Javascript, url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+  {
+    name: "JavaScript",
+    logo: Javascript,
+    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
 ];
 
 export default function About(props) {
@@ -40,9 +44,9 @@ export default function About(props) {
           Hire Me
         </button>
       </div>
-      <div className="relative mt-10 flex flex-col items-center ">
+      <div className="relative mt-7 flex flex-col items-center ">
         <img
-          className="w-60 h-60 md:w-96 md:h-96" // Responsive size
+          className="w-60 h-60 md:w-96 md:h-96 " // Responsive size
           src={Profile}
           alt="Profile"
         />
@@ -50,7 +54,7 @@ export default function About(props) {
           const isLeft = index < 2; // First two on the left
           const position = isLeft
             ? "left-0 md:-left-20"
-            : "right-0 md:-right-32"; // Adjust position for responsiveness
+            : "right-0 md:-right-20"; // Adjust position for responsiveness
           return (
             <a
               key={index}
@@ -59,12 +63,18 @@ export default function About(props) {
               rel="noopener noreferrer"
               className={`absolute animate-float flex items-center p-2 bg-white shadow-lg rounded-full ${position}`}
               style={{
-                top: `${(index % 2) * 40 + 20}%`, // Adjust vertical position
+                top: `${index * 20 + 20}%`, 
                 transform: isLeft ? "translateX(-100%)" : "translateX(100%)",
               }}
             >
-              <img className="w-6 h-6 md:w-8 md:h-8 mx-1 cursor-pointer" src={tech.logo} alt={tech.name} />
-              <span className="text-xs md:text-sm font-medium mr-2 md:mr-4">{tech.name}</span>
+              <img
+                className="w-6 h-6 md:w-8 md:h-8 mx-1 cursor-pointer"
+                src={tech.logo}
+                alt={tech.name}
+              />
+              <span className="text-xs md:text-sm font-medium mr-2 md:mr-4">
+                {tech.name}
+              </span>
             </a>
           );
         })}
