@@ -1,9 +1,28 @@
-import { useState } from "react";
-import Clos from "../../assets/Images/ttp.png";
-import Burger from "../../assets/Images/bgr.png";
+import React, { useState, useEffect } from "react";
+import Clos from "../../../assets/Images/ttp.png";
+import Burger from "../../../assets/Images/bgr.png";
+import { FaMoon } from "react-icons/fa";
+import { FaSun } from "react-icons/fa";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem("darkMode");
+    return savedMode ? JSON.parse(savedMode) : false;
+  });
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    localStorage.setItem("darkMode", JSON.stringify(darkMode));
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
   return (
     <nav className="bg-gradient-to-r from-yellow-300 to-yellow-600 px-4 py-5 items-center">
@@ -21,7 +40,14 @@ export default function Navbar() {
         <li className="hover:text-gray-900 text-gray-100">
           <a href="#contact">Contact</a>
         </li>
+        <button
+          className="px-2 py-2 bg-black text-white rounded-full"
+          onClick={toggleDarkMode}
+        >
+          {darkMode ? <FaSun/> : <FaMoon/>}
+        </button>
       </ul>
+
       <div className="flex">
         <div className="md:hidden flex justify-center items-center">
           <img

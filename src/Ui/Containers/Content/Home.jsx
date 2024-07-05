@@ -1,10 +1,10 @@
 import React from "react";
-import Rafi from "../../assets/Images/logo.png";
-import Rea from "../../assets/Images/Rea.png";
-import Profile from "../../assets/Images/Rafi.png";
+import Rafi from "../../../assets/Images/logo.png";
+import Rea from "../../../assets/Images/Rea.png";
+import Profile from "../../../assets/Images/Rafi.png";
 import { GoDownload } from "react-icons/go";
-import Javascript from "../../assets/Images/javascript.png";
-import Tailwindcss from "../../assets/Images/tailwind.png";
+import Javascript from "../../../assets/Images/javascript.png";
+import Tailwindcss from "../../../assets/Images/tailwind.png";
 
 const technologies = [
   { name: "ReactJS", logo: Rea, url: "https://reactjs.org" },
@@ -17,7 +17,7 @@ const technologies = [
   },
 ];
 
-export default function About(props) {
+export default function Home(props) {
   const id = props.id;
 
   return (
@@ -61,18 +61,18 @@ export default function About(props) {
               href={tech.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`absolute animate-float flex items-center p-2 bg-white shadow-lg rounded-full ${position}`}
+              className={`absolute animate-float flex items-center p-2 bg-slate-200 shadow-lg rounded-full ${position}`}
               style={{
-                top: `${index * 20 + 20}%`, 
+                top: `${index * 20 + 20}%`,
                 transform: isLeft ? "translateX(-100%)" : "translateX(100%)",
               }}
             >
               <img
-                className="w-6 h-6 md:w-8 md:h-8 mx-1 cursor-pointer"
+                className="w-6 text-slate-500 h-6 md:w-8 md:h-8 mx-1 cursor-pointer"
                 src={tech.logo}
                 alt={tech.name}
               />
-              <span className="text-xs md:text-sm font-medium mr-2 md:mr-4">
+              <span className="text-xs md:text-sm text-black font-medium mr-2 md:mr-4">
                 {tech.name}
               </span>
             </a>

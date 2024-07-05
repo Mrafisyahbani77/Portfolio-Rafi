@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.dark {
+    /* Tambahkan gaya-gaya untuk dark mode di sini */
+    background-color: #121212;
+    color: white;
+  }
 
 .navbar-fixed {
     @apply fixed z-[9999] bg-opacity-60 backdrop-blur-lg shadow-lg
