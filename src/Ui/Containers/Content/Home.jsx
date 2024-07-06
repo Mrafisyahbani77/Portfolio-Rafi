@@ -36,11 +36,11 @@ export default function Home(props) {
         <span className="font-serif">A</span> Front End Developer |
       </div>
       <div className="flex mt-5 space-x-4">
-        <button className="bg-yellow-500 flex text-white px-4 py-2 rounded shadow-lg hover:bg-yellow-600">
+        <button className="bg-yellow-500 flex  px-4 py-2 rounded shadow-lg hover:bg-yellow-600">
           <GoDownload className="mt-1 mr-1" />
           Resume
         </button>
-        <button className="bg-yellow-500 text-white px-4 py-2 rounded shadow-lg hover:bg-yellow-600">
+        <button className="bg-yellow-500  px-4 py-2 rounded shadow-lg hover:bg-yellow-600">
           Hire Me
         </button>
       </div>
