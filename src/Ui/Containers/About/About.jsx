@@ -20,7 +20,7 @@ export default function About(props) {
         About Me
       </div>
       <div className="flex flex-col lg:flex-row justify-center items-center mt-8 lg:space-x-8">
-        <div className="mr-6 relative text-center">
+        <div className="mx-3 relative text-center">
           <img
             className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full mb-4" // Increased size and added margin bottom
             src={profileImage}
@@ -34,10 +34,10 @@ export default function About(props) {
               <div key={index} className={`absolute ${positionClass} ${verticalClass} transform ${index % 2 === 0 ? '-translate-x-24' : 'translate-x-24'} mt-4`}>
                 <section className="flex items-center p-2 bg-slate-200 shadow-lg rounded-full animate-float">
                   {fav.isIcon ? (
-                    <fav.logo className="w-4 h-4 md:w-6 md:h-6 mx-1 cursor-pointer text-slate-500" />
+                    <fav.logo className="w-4 h-4 md:w-6 md:h-6 mx-1 text-slate-500" />
                   ) : (
                     <img
-                      className="w-4 h-4 md:w-6 md:h-6 mx-1 cursor-pointer"
+                      className="w-4 h-4 md:w-6 md:h-6 mx-1"
                       src={fav.logo}
                       alt={fav.name}
                     />

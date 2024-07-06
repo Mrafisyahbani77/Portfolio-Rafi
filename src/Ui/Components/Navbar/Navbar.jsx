@@ -32,7 +32,13 @@ export default function Navbar() {
           <a href="#about">About</a>
         </li>
         <li className="hover:text-gray-900 text-gray-100">
+          <a href="#Serti">Certificates</a>
+        </li>
+        <li className="hover:text-gray-900 text-gray-100">
           <a href="#skill">Skills</a>
+        </li>
+        <li className="hover:text-gray-900 text-gray-100">
+          <a href="#Edukasi">Education</a>
         </li>
         <li className="hover:text-gray-900 text-gray-100">
           <a href="#portfolio">Portfolio</a>
