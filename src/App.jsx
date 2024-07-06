@@ -3,6 +3,8 @@ import Home from "../src/Ui/Containers/Content/Home"
 import About from "../src/Ui/Containers/About/About"
 import Education from "../src/Ui/Containers/Education/Edukasi"
 import Serti from "../src/Ui/Containers/Certificates/Sertifikat"
+import Porto from "../src/Ui/Containers/Portfolio/Portfolio"
+import Skil from "../src/Ui/Containers/Skills/Skil"
 
 export default function App() {
   return (
@@ -10,8 +12,10 @@ export default function App() {
       <Navbar/>
       <Home/>
       <About id='about'/>
+      <Skil id='skils'/>
       <Education id='Edukasi'/>
-      <Serti id='Serti'/>
+      <Serti id='serti'/>
+      <Porto id='portfolio'/>
     </div>
   )
 }

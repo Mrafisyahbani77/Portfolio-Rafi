@@ -1,17 +1,16 @@
 import Smk from "../../../assets/Images/smk.png";
 import Dcd from "../../../assets/Images/coding.jpeg";
-import Logic from "../../../assets/Certificate/Logic.pdf"
-import Data from "../../../assets/Certificate/data.pdf"
-import Grow from "../../../assets/Certificate/pengembangan.pdf"
-import Cdng from "../../../assets/Certificate/Smkcoding.pdf"
-import Rapot from "../../../assets/Certificate/Rapor.pdf"
+import Logic from "../../../assets/Certificate/Logic.pdf";
+import Data from "../../../assets/Certificate/data.pdf";
+import Grow from "../../../assets/Certificate/pengembangan.pdf";
+import Cdng from "../../../assets/Certificate/Smkcoding.pdf";
+import Rapot from "../../../assets/Certificate/Rapor.pdf";
 
 const Sertifik = [
   {
     id: 1,
     platform: "Dicoding",
-    title:
-      " Pengenalan ke Logika Pemrograman (Programming Logic 101)",
+    title: " Pengenalan ke Logika Pemrograman (Programming Logic 101)",
     icon: Dcd,
     file: Logic,
   },
@@ -27,16 +26,14 @@ const Sertifik = [
   {
     id: 3,
     platform: "Dicoding",
-    title:
-      "Belajar Dasar Visualisasi Data",
+    title: "Belajar Dasar Visualisasi Data",
     icon: Dcd,
     file: Data,
   },
   {
     id: 4,
     platform: "Dicoding",
-    title:
-      "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
+    title: "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
     icon: Dcd,
     file: Grow,
   },
@@ -56,13 +53,15 @@ const Sertifik = [
   },
 ];
 
-export default function Sertifikat() {
+export default function Sertifikat(props) {
+  const id = props.id;
+
   const handleViewCertificate = (file) => {
     window.open(file, "_blank");
   };
 
   return (
-    <div className="min-h-screen p-4 sm:p-8">
+    <div id={id} className="min-h-screen p-4 sm:p-8">
       <h1 className="text-4xl font-semibold text-yellow-600 text-center mb-8">
         Sertifikat
       </h1>
@@ -89,12 +88,14 @@ export default function Sertifikat() {
             >
               Lihat
             </button>
-            <button
-              className="ml-2 bg-white border text-black border-gray-300 rounded-full px-4 py-2 hover:bg-gray-200"
-              onClick={() => handleViewCertificate(cert.rapot)}
-            >
-              {cert.Choice}
-            </button>
+            {cert.rapot && cert.Choice && (
+              <button
+                className="ml-2 bg-white border text-black border-gray-300 rounded-full px-4 py-2 hover:bg-gray-200"
+                onClick={() => handleViewCertificate(cert.rapot)}
+              >
+                {cert.Choice}
+              </button>
+            )}
           </div>
         ))}
       </div>
