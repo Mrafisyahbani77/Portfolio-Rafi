@@ -27,7 +27,7 @@ export default function Navbar() {
   return (
     <nav className="bg-gradient-to-r from-yellow-300 to-yellow-600 px-4 py-5 items-center">
       {/* Menu untuk tampilan desktop */}
-      <ul className="hidden md:flex justify-center items-center space-x-5 text-lg font-mono">
+      <ul className="hidden md:flex justify-center items-center space-x-5 mr-20 text-lg font-mono">
         <li className="hover:text-gray-900 text-gray-100">
           <a href="#about">About</a>
         </li>
@@ -40,13 +40,15 @@ export default function Navbar() {
         <li className="hover:text-gray-900 text-gray-100">
           <a href="#contact">Contact</a>
         </li>
-        <button
-          className="px-2 py-2 bg-black text-white rounded-full"
-          onClick={toggleDarkMode}
-        >
-          {darkMode ? <FaSun/> : <FaMoon/>}
-        </button>
       </ul>
+
+      {/* Tombol Dark Mode di luar list untuk tetap terlihat */}
+      <button
+        className="px-2 py-2 bg-black text-white rounded-full float-right "
+        onClick={toggleDarkMode}
+      >
+        {darkMode ? <FaSun /> : <FaMoon />}
+      </button>
 
       <div className="flex">
         <div className="md:hidden flex justify-center items-center">
