@@ -28,10 +28,10 @@ export default function Skil(props) {
 
   return (
     <div id={id} className="min-h-screen flex flex-col items-center py-10">
-      <h1 className="text-4xl text-yellow-600 font-bold mb-6">Skills</h1>
+      <h1 className="text-4xl text-yellow-600 font-bold mb-14">Skills</h1>
 
       <section className="mb-10 w-4/5 md:w-2/3 lg:w-1/2">
-        <h2 className="text-2xl font-semibold mb-4">Design Tools I Use</h2>
+        <h2 className="text-2xl text-center text-yellow-600 font-semibold mb-4">Design Tools I Use</h2>
         <div className="flex justify-center space-x-4">
           {skills.designTools.map((tool, index) => (
             <div
@@ -46,7 +46,7 @@ export default function Skil(props) {
       </section>
 
       <section className="mb-10 w-4/5 md:w-2/3 lg:w-1/2">
-        <h2 className="text-2xl font-semibold mb-4">Technologies I Use</h2>
+        <h2 className="text-2xl text-yellow-600 font-semibold text-center mb-4">Technologies I Use</h2>
         <div className="flex flex-wrap justify-center gap-4">
           {skills.technologies.map((tech, index) => (
             <div
@@ -61,7 +61,7 @@ export default function Skil(props) {
       </section>
 
       <section className="mb-10 w-4/5 md:w-2/3 lg:w-1/2">
-        <h2 className="text-2xl font-semibold mb-4">
+        <h2 className="text-2xl text-yellow-600 text-center font-semibold mb-4">
           Development & Productivity Tools I Use
         </h2>
         <div className="flex flex-wrap justify-center gap-4">
