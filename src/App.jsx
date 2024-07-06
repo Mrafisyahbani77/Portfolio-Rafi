@@ -5,6 +5,7 @@ import Education from "../src/Ui/Containers/Education/Edukasi"
 import Serti from "../src/Ui/Containers/Certificates/Sertifikat"
 import Porto from "../src/Ui/Containers/Portfolio/Portfolio"
 import Skil from "../src/Ui/Containers/Skills/Skil"
+import Contact from "../src/Ui/Containers/Contact/Contact"
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Education id='Edukasi'/>
       <Serti id='serti'/>
       <Porto id='portfolio'/>
+      <Contact id='contact'/>
     </div>
   )
 }

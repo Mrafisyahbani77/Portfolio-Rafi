@@ -1,19 +1,30 @@
-import React from "react";
 import Rafi from "../../../assets/Images/logo.png";
 import Rea from "../../../assets/Images/Rea.png";
 import Profile from "../../../assets/Images/Rafi.png";
 import { GoDownload } from "react-icons/go";
 import Javascript from "../../../assets/Images/javascript.png";
 import Tailwindcss from "../../../assets/Images/tailwind.png";
+import { SiNextdotjs } from "react-icons/si";
 
 const technologies = [
-  { name: "ReactJS", logo: Rea, url: "https://reactjs.org" },
-  { name: "NextJS", logo: "nextjs-logo-url", url: "https://nextjs.org" },
-  { name: "Tailwind CSS", logo: Tailwindcss, url: "https://tailwindcss.com" },
+  { name: "ReactJS", logo: Rea, url: "https://reactjs.org", isIcon: false },
+  {
+    name: "NextJS",
+    logo: SiNextdotjs,
+    url: "https://nextjs.org",
+    isIcon: true,
+  },
+  {
+    name: "Tailwind CSS",
+    logo: Tailwindcss,
+    url: "https://tailwindcss.com",
+    isIcon: false,
+  },
   {
     name: "JavaScript",
     logo: Javascript,
     url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    isIcon: false,
   },
 ];
 
@@ -36,17 +47,17 @@ export default function Home(props) {
         <span className="font-serif">A</span> Front End Developer |
       </div>
       <div className="flex mt-5 space-x-4">
-        <button className="bg-yellow-500 flex  px-4 py-2 rounded shadow-lg hover:bg-yellow-600">
+        <button className="bg-yellow-500 flex px-4 py-2 rounded shadow-lg hover:bg-yellow-600">
           <GoDownload className="mt-1 mr-1" />
           Resume
         </button>
-        <button className="bg-yellow-500  px-4 py-2 rounded shadow-lg hover:bg-yellow-600">
+        <button className="bg-yellow-500 px-4 py-2 rounded shadow-lg hover:bg-yellow-600">
           Hire Me
         </button>
       </div>
-      <div className="relative mt-7 flex flex-col items-center ">
+      <div className="relative mt-7 flex flex-col items-center">
         <img
-          className="w-60 h-60 md:w-96 md:h-96 " // Responsive size
+          className="w-60 h-60 md:w-96 md:h-96" // Responsive size
           src={Profile}
           alt="Profile"
         />
@@ -67,11 +78,15 @@ export default function Home(props) {
                 transform: isLeft ? "translateX(-100%)" : "translateX(100%)",
               }}
             >
-              <img
-                className="w-6 text-slate-500 h-6 md:w-8 md:h-8 mx-1 cursor-pointer"
-                src={tech.logo}
-                alt={tech.name}
-              />
+              {tech.isIcon ? (
+                <tech.logo className="w-4 h-4 md:w-8 md:h-8 mx-1 cursor-pointer" />
+              ) : (
+                <img
+                  className="w-6 h-6 md:w-8 md:h-8 mx-1 cursor-pointer"
+                  src={tech.logo}
+                  alt={tech.name}
+                />
+              )}
               <span className="text-xs md:text-sm text-black font-medium mr-2 md:mr-4">
                 {tech.name}
               </span>

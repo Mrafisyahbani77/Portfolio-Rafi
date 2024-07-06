@@ -10,25 +10,30 @@ export default function Education(props) {
   const educationData = [
     {
       duration: "2012 - 2016",
-      degree: "Tk Al-Ikhlas",
-      field:
-        "Form a PAUD unit that organizes programs for children aged 4 to 6 years in a more structured manner.",
-      location: "Bukit asri, Ciomas,",
+      degree: "Paud Al-Ikhlas",
+      location:
+        "Perum bukit asri, Pagelaran, Kec. Ciomas, Kabupaten Bogor, Jawa Barat",
       type: "Graduation",
       typeIcon: FaGraduationCap,
-      mapsLink:
-        "https://www.google.com/maps?q=Veer+Narmad+South+Gujarat+University,Surat,Gujarat,India",
+      mapsLink: "https://maps.app.goo.gl/3DZhwm56oNxVsrLk8",
     },
     {
       duration: "2020 - 2022",
-      degree: "Master's Degree",
-      field: "Master of Computer Applications",
-      university: "Parul University",
-      location: "Vadodara, Gujarat, India",
-      type: "Post Graduation",
+      degree: "MI.Nasyatul Islamiyah",
+      location:
+        "Jl. Perum Bukit Asri Kp. Laladon, Pagelaran, Kec. Ciomas, Kabupaten Bogor, Jawa Barat",
+      type: "Graduation",
       typeIcon: FaGraduationCap,
-      mapsLink:
-        "https://www.google.com/maps?q=Parul+University,Vadodara,Gujarat,India",
+      mapsLink: "https://maps.app.goo.gl/PLiqtmHDvKP3aB3P9",
+    },
+    {
+      duration: "2012 - 2016",
+      degree: "Smp Informatika Bina Generasi",
+      location:
+        "Perum bukit asri, Pagelaran, Kec. Ciomas, Kabupaten Bogor, Jawa Barat",
+      type: "Graduation",
+      typeIcon: FaGraduationCap,
+      mapsLink: "https://maps.app.goo.gl/CP5AY5TxEjtA6JWP6",
     },
   ];
 
@@ -44,7 +49,7 @@ export default function Education(props) {
               key={index}
               className="bg-slate-400 p-6 rounded-xl shadow-md w-full lg:w-1/2"
             >
-              <div className="flex rounded bg-black items-center px-4 max-w-[60%] md:max-w-[35%] mb-4">
+              <div className="flex rounded bg-black items-center px-4 max-w-[60%] md:max-w-[56%] mb-4">
                 <BsCalendar className="text-yellow-500 mr-2" />
                 <span className="text-yellow-500 font-medium">
                   {edu.duration}
@@ -69,7 +74,7 @@ export default function Education(props) {
                   rel="noopener noreferrer"
                   className="ml-1 py-1 px-2 text-xs flex items-center rounded-3xl bg-yellow-100"
                 >
-                  <FaMapMarkedAlt className="mr-1"/> View Location
+                  <FaMapMarkedAlt className="mr-1" /> View Location
                 </a>
               </div>
             </div>
