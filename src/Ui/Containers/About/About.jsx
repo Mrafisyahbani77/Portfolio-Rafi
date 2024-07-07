@@ -34,7 +34,7 @@ export default function About(props) {
               <div key={index} className={`absolute ${positionClass} ${verticalClass} transform ${index % 2 === 0 ? '-translate-x-24' : 'translate-x-24'} mt-4`}>
                 <section className="flex items-center p-2 bg-slate-200 shadow-lg rounded-full animate-float">
                   {fav.isIcon ? (
-                    <fav.logo className="w-4 h-4 md:w-6 md:h-6 mx-1 text-slate-500" />
+                    <fav.logo className="w-4 h-4 text-black md:w-6 md:h-6 mx-1" />
                   ) : (
                     <img
                       className="w-4 h-4 md:w-6 md:h-6 mx-1"

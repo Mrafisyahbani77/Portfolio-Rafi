@@ -32,10 +32,7 @@ export default function Home(props) {
       <div className="flex mt-5 space-x-4">
         <button className="bg-yellow-500 flex px-4 py-2 rounded shadow-lg hover:bg-yellow-600">
           <GoDownload className="mt-1 mr-1" />
-          Resume
-        </button>
-        <button className="bg-yellow-500 px-4 py-2 rounded shadow-lg hover:bg-yellow-600">
-          Hire Me
+          Download CV
         </button>
       </div>
       <div className="relative mt-7 flex flex-col items-center">

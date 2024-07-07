@@ -36,19 +36,19 @@ const Footer = () => {
               ))}
             </div>
             <div className="flex flex-wrap justify-center space-x-4 md:space-x-6">
-              <a href="#" className="hover:text-gray-400">
+              <a href="#home" className="hover:text-gray-400">
                 Home
               </a>
-              <a href="#" className="hover:text-gray-400">
+              <a href="#about" className="hover:text-gray-400">
                 About
               </a>
-              <a href="#" className="hover:text-gray-400">
+              <a href="#skils" className="hover:text-gray-400">
                 Skills
               </a>
-              <a href="#" className="hover:text-gray-400">
+              <a href="#project" className="hover:text-gray-400">
                 Project
               </a>
-              <a href="#" className="hover:text-gray-400">
+              <a href="#contact" className="hover:text-gray-400">
                 Contact
               </a>
             </div>

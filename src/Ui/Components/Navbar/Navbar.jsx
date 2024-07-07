@@ -28,6 +28,9 @@ export default function Navbar() {
     <nav className="bg-gradient-to-r from-yellow-300 to-yellow-600 px-4 py-5 items-center">
       {/* Menu untuk tampilan desktop */}
       <ul className="hidden md:flex justify-center items-center space-x-5 text-lg font-mono">
+      <li className="hover:text-gray-900 text-gray-100">
+          <a href="#home">Home</a>
+        </li>
         <li className="hover:text-gray-900 text-gray-100">
           <a href="#about">About</a>
         </li>
@@ -41,7 +44,7 @@ export default function Navbar() {
           <a href="#serti">Certificates</a>
         </li>
         <li className="hover:text-gray-900 text-gray-100">
-          <a href="#portfolio">Portfolio</a>
+          <a href="#project">Project</a>
         </li>
         <li className="hover:text-gray-900 text-gray-100">
           <a href="#contact">Contact</a>

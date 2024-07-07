@@ -11,13 +11,13 @@ import Footer from "../src/Ui/Components/Footer/Footer";
 export default function App() {
   return (
     <div>
-      <Navbar />
-      <Home />
+      <Navbar /> 
+      <Home id="home"/>
       <About id="about" />
       <Skil id="skils" />
       <Education id="Edukasi" />
       <Serti id="serti" />
-      <Porto id="portfolio" />
+      <Porto id="project" />
       <Contact id="contact" />
       <Footer />
     </div>
