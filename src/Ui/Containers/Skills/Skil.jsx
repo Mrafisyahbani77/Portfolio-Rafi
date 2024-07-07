@@ -1,6 +1,10 @@
 import React from "react";
 import { SiNextdotjs, SiPostman } from "react-icons/si";
-import Tailwind from "../../../assets/Images/tailwind.png"; // Pastikan jalur gambar benar
+import Tailwind from "../../../assets/Images/tailwind.png";  
+import Html from "../../../assets/Images/html.png";  
+import Rea from "../../../assets/Images/Rea.png";  
+import Css from "../../../assets/Images/css.png";  
+import Js from "../../../assets/Images/javascript.png";  
 
 const skills = {
   designTools: [
@@ -8,10 +12,10 @@ const skills = {
     { name: "Figma", icon: "path-to-icon" },
   ],
   technologies: [
-    { name: "HTML5", icon: "" },
-    { name: "CSS3", icon: "" },
-    { name: "JavaScript", icon: "" },
-    { name: "ReactJS", icon: "" },
+    { name: "HTML5", icon:  <img src={Html} alt="Html" className="w-6 h-6" /> },
+    { name: "CSS3", icon:  <img src={Css} alt="CSS" className="w-6 h-6" /> },
+    { name: "JavaScript", icon:  <img src={Js} alt="Javascript" className="w-6 h-6" /> },
+    { name: "ReactJS", icon:  <img src={Rea} alt="React" className="w-6 h-6" /> },
     { name: "NextJS", icon: <SiNextdotjs /> },
     { name: "Tailwind CSS", icon: <img src={Tailwind} alt="Tailwind CSS" className="w-6 h-6" /> },
   ],
