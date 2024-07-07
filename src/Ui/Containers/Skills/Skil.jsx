@@ -27,7 +27,7 @@ export default function Skil(props) {
   const id = props.id;
 
   return (
-    <div id={id} className="min-h-screen flex flex-col items-center py-10">
+    <div id={id} className="min-h-screen text-black flex flex-col items-center py-10">
       <h1 className="text-4xl text-yellow-600 font-bold mb-14">Skills</h1>
 
       <section className="mb-10 w-4/5 md:w-2/3 lg:w-1/2">

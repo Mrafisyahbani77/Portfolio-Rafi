@@ -6,26 +6,12 @@ import Javascript from "../../../assets/Images/javascript.png";
 import Tailwindcss from "../../../assets/Images/tailwind.png";
 import { SiNextdotjs } from "react-icons/si";
 
+
 const technologies = [
   { name: "ReactJS", logo: Rea, url: "https://reactjs.org", isIcon: false },
-  {
-    name: "NextJS",
-    logo: SiNextdotjs,
-    url: "https://nextjs.org",
-    isIcon: true,
-  },
-  {
-    name: "Tailwind CSS",
-    logo: Tailwindcss,
-    url: "https://tailwindcss.com",
-    isIcon: false,
-  },
-  {
-    name: "JavaScript",
-    logo: Javascript,
-    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    isIcon: false,
-  },
+  { name: "NextJS", logo: SiNextdotjs, url: "https://nextjs.org", isIcon: true },
+  { name: "Tailwind CSS", logo: Tailwindcss, url: "https://tailwindcss.com", isIcon: false },
+  { name: "JavaScript", logo: Javascript, url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", isIcon: false },
 ];
 
 export default function Home(props) {
@@ -33,10 +19,7 @@ export default function Home(props) {
 
   return (
     <div className="flex flex-col items-center mt-10 px-4">
-      <section
-        id={id}
-        className="flex flex-col items-center md:flex-row text-center p-5"
-      >
+      <section id={id} className="flex flex-col items-center md:flex-row text-center p-5">
         <div className="mb-1 font-semibold mx-1">Hello! I'm Muhammad</div>
         <div className="flex items-center justify-center bg-gradient-to-r to-yellow-500 from-yellow-300 shadow-lg px-2 py-1 rounded-lg">
           <img className="w-10 h-10 pl-1 mx-1" src={Rafi} alt="R" />
@@ -63,9 +46,7 @@ export default function Home(props) {
         />
         {technologies.map((tech, index) => {
           const isLeft = index < 2; // First two on the left
-          const position = isLeft
-            ? "left-0 md:-left-20"
-            : "right-0 md:-right-20"; // Adjust position for responsiveness
+          const position = isLeft ? "left-0 md:-left-20" : "right-0 md:-right-20"; // Adjust position for responsiveness
           return (
             <a
               key={index}
@@ -79,13 +60,9 @@ export default function Home(props) {
               }}
             >
               {tech.isIcon ? (
-                <tech.logo className="w-4 h-4 md:w-8 md:h-8 mx-1 cursor-pointer" />
+                <tech.logo className="w-6 h-6 text-black md:w-8 md:h-8 mx-1 cursor-pointer" />
               ) : (
-                <img
-                  className="w-6 h-6 md:w-8 md:h-8 mx-1 cursor-pointer"
-                  src={tech.logo}
-                  alt={tech.name}
-                />
+                <img className="w-6 h-6 md:w-8 md:h-8 mx-1 cursor-pointer" src={tech.logo} alt={tech.name} />
               )}
               <span className="text-xs md:text-sm text-black font-medium mr-2 md:mr-4">
                 {tech.name}
