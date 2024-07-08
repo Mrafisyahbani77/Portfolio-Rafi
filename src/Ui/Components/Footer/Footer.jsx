@@ -1,7 +1,7 @@
 import Ig from "../../../assets/Images/Ig.png";
 import Gm from "../../../assets/Images/gmail.png";
 import Yt from "../../../assets/Images/youtube.png";
-import Git from "../../../assets/Images/githubIcon.png";
+import Git from "../../../assets/Images/git.png";
 import Logo from "../../../assets/Images/Rapi.png";
 
 const socialMediaLinks = [
@@ -19,39 +19,40 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-8">
       <div className="container mx-auto flex flex-col md:flex-row md:justify-between md:items-start">
-        <div className="mb-8 flex md:mb-0 md:text-left md:w-1/3">
+        <div className="mb-8 md:flex md:mb-0 md:text-left hidden md:w-1/3">
           <img
-            className="mx-3 w-16 h-16 md:min-w-36 md:h-32"
+            className="mx-3 w-16 h-16 md:min-w-52 md:h-32"
             src={Logo}
             alt="Rafi"
           />
         </div>
         <div className="w-full md:w-2/3">
-          <div className="flex flex-col items-center md:flex-row md:justify-between border-b border-gray-700 pb-4 mb-8">
+          <div className="flex flex-col items-center md:flex-r md:justify-between border-b border-gray-700 pb-4 mb-8">
             <div className="flex flex-wrap justify-center space-x-4 md:space-x-6 mb-4 md:mb-0">
-              {socialMediaLinks.map((link, index) => (
-                <a key={index} href={link.url} className="hover:text-gray-400">
-                  {link.name}
+              
+                <a href="#home" className="hover:text-gray-400">
+                  Home
                 </a>
-              ))}
-            </div>
-            <div className="flex flex-wrap justify-center space-x-4 md:space-x-6">
-              <a href="#home" className="hover:text-gray-400">
-                Home
-              </a>
-              <a href="#about" className="hover:text-gray-400">
-                About
-              </a>
-              <a href="#skils" className="hover:text-gray-400">
-                Skills
-              </a>
-              <a href="#project" className="hover:text-gray-400">
-                Project
-              </a>
-              <a href="#contact" className="hover:text-gray-400">
-                Contact
-              </a>
-            </div>
+                <a href="#about" className="hover:text-gray-400">
+                  About
+                </a>
+                <a href="#skils" className="hover:text-gray-400">
+                  Skills
+                </a>
+                <a href="#project" className="hover:text-gray-400">
+                  Project
+                </a>
+                <a href="#contact" className="hover:text-gray-400">
+                  Contact
+                </a>
+                <a href="#serti" className="hover:text-gray-400">
+                  Certificate
+                </a>
+                <a href="#Edukasi" className="hover:text-gray-400">
+                  Education
+                </a>
+              </div>
+            
           </div>
           <div className="flex justify-center space-x-4 mb-4">
             {socialMediaLinks.map((link, index) => (

@@ -41,7 +41,7 @@ export default function Navbar() {
           <a href="#Edukasi">Education</a>
         </li>
         <li className="hover:text-gray-900 text-gray-100">
-          <a href="#serti">Certificates</a>
+          <a href="#serti">Certificate</a>
         </li>
         <li className="hover:text-gray-900 text-gray-100">
           <a href="#project">Project</a>
