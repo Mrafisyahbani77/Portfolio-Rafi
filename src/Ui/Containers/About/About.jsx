@@ -21,12 +21,12 @@ export default function About(props) {
   const id = props.id;
 
   useEffect(() => {
-    console.log("Initializing AOS");
     AOS.init({
-      duration: 1000, // Animation duration
-      once: true, // Whether animation should happen only once
+      duration: 1000,
+      // disable : "phone",
+      easing: 'ease-out-cubic',
     });
-  }, []);
+  });
 
   return (
     <main className="p-4 mt-24 mb-24 relative">
