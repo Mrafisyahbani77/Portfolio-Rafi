@@ -37,20 +37,7 @@ const Sertifik = [
     icon: Dcd,
     file: Grow,
   },
-  {
-    id: 5,
-    platform: "LinkedIn",
-    title: "Pelatihan Penting React.js",
-    icon: "linkedin-icon.png",
-    file: "/path/to/linkedin-certificate.pdf",
-  },
-  {
-    id: 6,
-    platform: "Educative",
-    title: "Memahami Redux: Panduan Awal untuk Manajemen State",
-    icon: "educative-icon.png",
-    file: "/path/to/educative-certificate.pdf",
-  },
+  
 ];
 
 export default function Sertifikat(props) {
