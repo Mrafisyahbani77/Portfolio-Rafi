@@ -20,7 +20,7 @@ const projects = [
     bgColor: "bg-red-900 text-white"
   },
   {
-    title: "Epiko Market",
+    title: "Naruto AllCharacter",
     workedOn: ["Website"],
     technologies: ["Ts", "Tailwind CSS", "Remix"],
     link: "https://naruto-all-characters.vercel.app/", // Replace with actual link

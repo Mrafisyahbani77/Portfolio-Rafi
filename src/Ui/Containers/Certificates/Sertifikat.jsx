@@ -69,7 +69,7 @@ export default function Sertifikat(props) {
         {Sertifik.map((cert) => (
           <div
             key={cert.id}
-            className="bg-slate-400 rounded-lg shadow-md p-4 m-2 items-center"
+            className="border bg-slate-400 rounded-lg shadow-md p-4 m-2 items-center"
           >
             <span className="flex px-2 max-w-[70%] md:max-w-[32%] space-x-1 py-2 bg-black rounded-full">
               <img

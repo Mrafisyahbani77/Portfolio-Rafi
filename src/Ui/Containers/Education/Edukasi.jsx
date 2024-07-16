@@ -55,7 +55,7 @@ export default function Education(props) {
           {educationData.map((edu, index) => (
             <div
               key={index}
-              className="bg-slate-400 p-6 rounded-xl shadow-md"
+              className="bg-slate-400 border p-6 rounded-xl shadow-md"
             >
               <div className="flex rounded-md py-1 bg-black items-center px-4 max-w-[50%] md:max-w-[33%] mb-4">
                 <BsCalendar className="text-yellow-500 mr-2" />
