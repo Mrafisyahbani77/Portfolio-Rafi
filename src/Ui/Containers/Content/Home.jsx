@@ -36,7 +36,7 @@ export default function Home(props) {
   return (
     <>
       {" "}
-      <Particle />
+      <Particle className="absolute inset-0 -z-10 "/>
       <div className=" flex md:flex-row flex-col items-center mt-10 px-4">
         <section
           id={id}
