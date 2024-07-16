@@ -62,14 +62,14 @@ export default function Sertifikat(props) {
 
   return (
     <div id={id} className="min-h-screen p-4 sm:p-8">
-      <h1 className="text-4xl font-semibold text-yellow-600 text-center mb-8">
+      <h1 className="text-4xl font-semibold hover:text-purple-500 cursor-pointer text-center mb-8">
         Sertifikat
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {Sertifik.map((cert) => (
           <div
             key={cert.id}
-            className="border bg-slate-400 rounded-lg shadow-md p-4 m-2 items-center"
+            className="border bg-gray-900 rounded-lg shadow-md p-4 m-2 items-center"
           >
             <span className="flex px-2 max-w-[70%] md:max-w-[32%] space-x-1 py-2 bg-black rounded-full">
               <img
@@ -81,13 +81,15 @@ export default function Sertifikat(props) {
                 {cert.platform}
               </h3>
             </span>
-            <p className="mt-4 font-bold text-center mb-4">{cert.title}</p>
+            <p className="mt-4 font-bold text-white text-center mb-4">{cert.title}</p>
+            <span  className="group">
             <button
-              className="bg-white border text-black border-gray-300 rounded-full px-4 py-2 hover:bg-gray-200"
+              className=" border hover:text-yellow-500 text-black bg-gray-500 border-gray-500 rounded-full px-4 py-2 hover:bg-gray-900"
               onClick={() => handleViewCertificate(cert.file)}
             >
               Lihat
             </button>
+            </span>
             {cert.rapot && cert.Choice && (
               <button
                 className="ml-2 bg-white border text-black border-gray-300 rounded-full px-4 py-2 hover:bg-gray-200"
