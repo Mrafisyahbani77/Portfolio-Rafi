@@ -51,7 +51,7 @@ export default function About(props) {
                   index % 2 === 0 ? "-translate-x-28" : "translate-x-28"
                 } mt-4`}
               >
-                <section className="flex group-hover:shadow-md group-hover:shadow-purple-500 items-center p-2 md:p-1 bg-slate-200 rounded-full animate-float">
+                <section className="flex cursor-pointer group-hover:shadow-md group-hover:shadow-purple-500 items-center p-2 md:p-1 bg-slate-200 rounded-full animate-float">
                   {fav.isIcon ? (
                     <fav.logo className="w-3 h-3 text-black md:w-6 md:h-6 mx-1" />
                   ) : (

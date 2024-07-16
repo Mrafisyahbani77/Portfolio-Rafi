@@ -70,14 +70,14 @@ export default function Education(props) {
                 </span>
               </div>
               <h4 className="text-xl mb-5 font-semibold">{edu.degree}</h4>
-              <div className="flex items-center">
+              <div className="flex items-center group">
                 <a
                   href={edu.mapsLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-1 py-1 px-2 text-xs flex items-center rounded-3xl bg-yellow-500"
+                  className="ml-1 py-1 px-2 group-hover:bg-slate-800 text-xs flex items-center rounded-3xl bg-sky-950"
                 >
-                  <FaMapMarkedAlt className="mr-1" /> View Location
+                  <FaMapMarkedAlt className="mr-1 text-black" /> <span className="group-hover:text-slate-500">View Location</span>
                 </a>
               </div>
             </div>
