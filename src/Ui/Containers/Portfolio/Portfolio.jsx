@@ -1,28 +1,30 @@
-import React from "react";
+import Porto1 from "../../../assets/Images/Por1.png"
+import Porto2 from "../../../assets/Images/Por2.png"
+import Porto3 from "../../../assets/Images/Por3.png"
 
 const projects = [
   {
-    title: "CricTracker",
-    workedOn: ["Website", "Admin Panel"],
-    technologies: ["JavaScript", "Bootstrap", "SCSS", "ReactJS", "NextJS", "AMP", "Redux Toolkit", "Apollo GraphQL"],
-    link: "#", // Replace with actual link
-    image: "https://via.placeholder.com/300x200", // Replace with actual image link or import
+    title: "Al-Quran",
+    workedOn: ["Website"],
+    technologies: [  "Tailwind CSS", "ReactJS"],
+    link: "https://website-al-quran.vercel.app/", // Replace with actual link
+    image: Porto1, // Replace with actual image link or import
     bgColor: "bg-blue-900 text-white"
   },
   {
-    title: "SportsBuzz",
-    workedOn: ["Website", "Admin Panel"],
-    technologies: ["JavaScript", "Bootstrap", "SCSS", "ReactJS", "NextJS", "AMP", "Redux Toolkit", "Apollo GraphQL"],
-    link: "#", // Replace with actual link
-    image: "https://via.placeholder.com/300x200", // Replace with actual image link or import
+    title: "Pokemon",
+    workedOn: ["Website"],
+    technologies: ["Tailwind CSS", "ReactJS"],
+    link: "https://pokemon-chi-ten.vercel.app/", // Replace with actual link
+    image: Porto2, // Replace with actual image link or import
     bgColor: "bg-red-900 text-white"
   },
   {
     title: "Epiko Market",
     workedOn: ["Website"],
-    technologies: ["JavaScript", "Bootstrap", "SCSS", "ReactJS", "NextJS", "AMP", "Redux Toolkit", "Apollo GraphQL"],
-    link: "#", // Replace with actual link
-    image: "https://via.placeholder.com/300x200", // Replace with actual image link or import
+    technologies: ["Ts", "Tailwind CSS", "Remix"],
+    link: "https://naruto-all-characters.vercel.app/", // Replace with actual link
+    image: Porto3, // Replace with actual image link or import
     bgColor: "bg-purple-900 text-white"
   },
 ];

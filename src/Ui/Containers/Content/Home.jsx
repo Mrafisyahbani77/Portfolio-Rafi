@@ -1,11 +1,12 @@
-import Rafi from "../../../assets/Images/logo.png";
-import Rea from "../../../assets/Images/Rea.png";
-import Profile from "../../../assets/Images/Rafi.png";
+import React from "react";
 import { GoDownload } from "react-icons/go";
+import Particle from "../../Components/Particle";
+import Profile from "../../../assets/Images/Rafi.png";
+import Rea from "../../../assets/Images/Rea.png";
 import Javascript from "../../../assets/Images/javascript.png";
 import Tailwindcss from "../../../assets/Images/tailwind.png";
 import { SiNextdotjs } from "react-icons/si";
-import Particle from "../../Components/Particle";
+import Cv from "../../../assets/Certificate/Cv.pdf"; // Adjust path if necessary
 
 const technologies = [
   { name: "ReactJS", logo: Rea, url: "https://reactjs.org", isIcon: false },
@@ -32,11 +33,19 @@ const technologies = [
 export default function Home(props) {
   const id = props.id;
 
+  const handleDownloadCV = () => {
+    const a = document.createElement("a");
+    a.href = Cv; // Set the href to the CV file path
+    a.download = "cv.pdf"; // Specify the file name for download
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
 
   return (
     <>
       {" "}
-      <Particle className="absolute inset-0 -z-10 "/>
+      <Particle className="absolute inset-0 -z-10 " />
       <div className=" flex md:flex-row flex-col items-center mt-10 px-4">
         <section
           id={id}
@@ -49,7 +58,10 @@ export default function Home(props) {
             <h2 className=" font-semibold">
               <span className="font-serif">A</span> Front End Developer |
             </h2>
-            <button className="bg-yellow-500 mt-2 md:flex absolute inline-flex px-4 py-2 rounded shadow-lg hover:bg-yellow-600">
+            <button
+              className="bg-yellow-500 mt-2 md:flex absolute inline-flex px-4 py-2 rounded shadow-lg hover:bg-yellow-600"
+              onClick={handleDownloadCV}
+            >
               <GoDownload className="mt-1 mr-1" />
               Download CV
             </button>
