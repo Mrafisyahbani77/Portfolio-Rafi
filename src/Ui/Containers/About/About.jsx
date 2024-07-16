@@ -36,7 +36,7 @@ export default function About(props) {
         <div className="mx-3 relative text-center">
           <img
             data-aos="flip-left"
-            className="w-32 h-32 md:w-52 md:h-52 lg:w-54 lg:h-54 rounded-full mb-4"
+            className="w-48 h-48 md:w-52 md:h-52 lg:w-54 lg:h-54 rounded-full mb-4"
             src={profileImage}
             alt="Profile"
           />
