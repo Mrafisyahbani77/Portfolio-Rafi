@@ -46,55 +46,22 @@ export default function Skil(props) {
   return (
     <div
       id={id}
-      className="mb-20 mt-8 text-black flex flex-col items-center py-10"
+      className="mb-20 mt-8 flex flex-col items-center py-10"
     >
-      <h1 className="text-4xl text-yellow-600 font-bold mb-14">Skills</h1>
-
-      {/* <section className="mb-10 w-4/5 md:w-2/3 lg:w-1/2">
-        <h2 className="text-2xl text-center text-yellow-600 font-semibold mb-4">Design Tools I Use</h2>
-        <div className="flex justify-center space-x-4">
-          {skills.designTools.map((tool, index) => (
-            <div
-              key={index}
-              className="flex items-center space-x-2 p-2 bg-slate-400 rounded"
-            >
-              <img src={tool.icon} alt={tool.name} className="w-6 h-6" />
-              <span>{tool.name}</span>
-            </div>
-          ))}
-        </div>
-      </section> */}
-
-      <section className="w-4/5 md:w-2/3 lg:w-1/2">
-        <div className="flex flex-wrap justify-center gap-4">
+      <h1 className="text-4xl hover:text-purple-500 cursor-pointer font-bold mb-14">Skills</h1>
+      <section className="w-4/5 md:w-2/3 lg:w-1/2 ">
+        <div className="flex group flex-wrap  text-white cursor-pointer justify-center gap-4">
           {skills.technologies.map((tech, index) => (
             <div
               key={index}
-              className="flex items-center space-x-2 p-2 bg-slate-200 rounded"
+              className="flex group-hover:shadow-md group-hover:shadow-purple-500 items-center space-x-2 p-2 bg-gray-900 rounded"
             >
               {tech.icon}
-              <span>{tech.name}</span>
+              <span className="group-hover:text-purple-500">{tech.name}</span>
             </div>
           ))}
         </div>
       </section>
-
-      {/* <section className="mb-10 w-4/5 md:w-2/3 lg:w-1/2">
-        <h2 className="text-2xl text-yellow-600 text-center font-semibold mb-4">
-          Development & Productivity Tools I Use
-        </h2>
-        <div className="flex flex-wrap justify-center gap-4">
-          {skills.tools.map((tool, index) => (
-            <div
-              key={index}
-              className="flex items-center space-x-2 p-2 bg-slate-400 rounded"
-            >
-              {tool.icon}
-              <span>{tool.name}</span>
-            </div>
-          ))}
-        </div>
-      </section> */}
     </div>
   );
 }

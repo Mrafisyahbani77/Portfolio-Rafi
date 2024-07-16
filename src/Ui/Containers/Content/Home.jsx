@@ -54,17 +54,19 @@ export default function Home(props) {
           <div className="mb-10 text-xl md:text-4xl font-semibold">
             Hello! I'm Muhammad Rafi Syahbani
           </div>
-          <div className="md:mr-auto">
+          <div className="md:mr-auto ">
             <h2 className=" font-semibold">
               <span className="font-serif">A</span> Front End Developer |
             </h2>
+            <span className="group">
             <button
-              className="bg-yellow-500 mt-2 md:flex inline-flex px-4 py-2 rounded shadow-lg hover:bg-yellow-600"
+              className="bg-gray-900 mt-2 md:flex inline-flex px-4 py-2 rounded shadow-lg"
               onClick={handleDownloadCV}
             >
-              <GoDownload className="mt-1 mr-1" />
-              Download CV
+              <GoDownload className="mt-1 mr-1 text-white group-hover:text-yellow-500" />
+             <text className="group-hover:text-yellow-500 text-white"> Download CV </text>
             </button>
+            </span>
           </div>
         </section>
         <div className="relative group md:ml-44 mt-7 flex flex-col items-center">
@@ -84,14 +86,14 @@ export default function Home(props) {
                 href={tech.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`absolute animate-float group-hover:shadow-md group-hover:shadow-purple-500  flex items-center md:px-2 p-1 bg-gradient-to-l from-slate-200 to-slate-300 rounded-full ${position}`}
+                className={`absolute animate-float group-hover:shadow-md  group-hover:shadow-purple-500  flex items-center md:px-2 p-1 bg-gray-900 rounded-full ${position}`}
                 style={{
                   top: `${index * 20 + 20}%`,
                   transform: isLeft ? "translateX(-100%)" : "translateX(100%)",
                 }}
               >
                 {tech.isIcon ? (
-                  <tech.logo className="w-6 md:py-1 md:px-1 h-6 text-black md:w-8 md:h-8 mx-1 cursor-pointer" />
+                  <tech.logo className="w-6 md:py-1 md:px-1 h-6 text-gray-600 md:w-8 md:h-8 mx-1 cursor-pointer" />
                 ) : (
                   <img
                     className="w-6 h-6 md:w-7 md:h-8 mx-1 cursor-pointer"
@@ -99,7 +101,7 @@ export default function Home(props) {
                     alt={tech.name}
                   />
                 )}
-                <span className="text-xs group-hover:text-purple-500 md:text-sm text-black font-medium mr-2 md:mr-4">
+                <span className="text-xs group-hover:text-purple-500 md:text-sm text-white font-medium mr-2 md:mr-4">
                   {tech.name}
                 </span>
               </a>

@@ -6,7 +6,7 @@ export default function Contact(props) {
         id={id}
         className="min-h-screen flex md:mt-4 mt-2 flex-col items-center justify-center"
       >
-        <div className="bg-gray-100 rounded-3xl shadow-lg p-8 w-full max-w-max">
+        <div className="bg-gray-900 rounded-3xl shadow-lg p-8 w-full max-w-max">
           <h2 className="text-2xl text-yellow-600 font-bold mb-6 text-center">Contact Me</h2>
           <form className="space-y-4">
             <div className="md:flex md:space-x-4">

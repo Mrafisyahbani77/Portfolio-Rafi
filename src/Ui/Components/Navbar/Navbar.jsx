@@ -25,81 +25,103 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-yellow-300 to-yellow-600 px-4 py-5 items-center">
-      {/* Menu untuk tampilan desktop */}
-      <ul className="hidden md:flex justify-center items-center space-x-5 text-lg font-mono">
-      <li className="hover:text-gray-900 text-gray-100">
-          <a href="#home">Home</a>
-        </li>
-        <li className="hover:text-gray-900 text-gray-100">
-          <a href="#about">About</a>
-        </li>
-        <li className="hover:text-gray-900 text-gray-100">
-          <a href="#skils">Skills</a>
-        </li>
-        <li className="hover:text-gray-900 text-gray-100">
-          <a href="#Edukasi">Education</a>
-        </li>
-        <li className="hover:text-gray-900 text-gray-100">
-          <a href="#serti">Certificate</a>
-        </li>
-        <li className="hover:text-gray-900 text-gray-100">
-          <a href="#project">Project</a>
-        </li>
-        <li className="hover:text-gray-900 text-gray-100">
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
+    <nav className="bg-gray-900 fixed w-full px-4 py-5 flex justify-between items-center z-50 top-0">
+      {/* Container for centering */}
+      <div className="flex items-center justify-center flex-grow">
+        {/* Menu untuk tampilan desktop */}
+        <ul className="hidden md:flex space-x-5 text-lg font-mono">
+          <li className="hover:text-gray-500 text-gray-100">
+            <a href="#home">Home</a>
+          </li>
+          <li className="hover:text-gray-500 text-gray-100">
+            <a href="#about">About</a>
+          </li>
+          <li className="hover:text-gray-500 text-gray-100">
+            <a href="#skills">Skills</a>
+          </li>
+          <li className="hover:text-gray-500 text-gray-100">
+            <a href="#edukasi">Education</a>
+          </li>
+          <li className="hover:text-gray-500 text-gray-100">
+            <a href="#certificate">Certificate</a>
+          </li>
+          <li className="hover:text-gray-500 text-gray-100">
+            <a href="#project">Project</a>
+          </li>
+          <li className="hover:text-gray-500 text-gray-100">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
 
-      {/* Tombol Dark Mode di luar list untuk tetap terlihat */}
-      <button
-        className="px-2 py-2 bg-black text-white rounded-full float-right "
-        onClick={toggleDarkMode}
-      >
-        {darkMode ? <FaSun /> : <FaMoon />}
-      </button>
+      {/* Tombol Dark Mode */}
+      <div className="flex items-center">
+        <button
+          className="px-2 py-2 bg-black text-white rounded-full md:ml-auto"
+          onClick={toggleDarkMode}
+        >
+          {darkMode ? <FaSun /> : <FaMoon />}
+        </button>
 
-      <div className="flex">
-        <div className="md:hidden flex justify-center items-center">
+        {/* Tombol Menu untuk tampilan responsif */}
+        <div className="md:hidden flex items-center ml-4">
           <img
             className="cursor-pointer w-8 h-8"
             src={menuOpen ? Clos : Burger}
             alt="menu-button"
             onClick={() => setMenuOpen(!menuOpen)}
           />
-
-          {/* Menu items untuk tampilan responsif */}
-          <div
-            className={`menuItems ${
-              menuOpen ? "block" : "hidden"
-            } absolute top-16 right-4 left-4 md:top-auto md:right-auto md:relative flex flex-col bg-gradient-to-b from-yellow-300 to-slate-500 rounded-md p-4 shadow-md`}
-          >
-            <a
-              href="#about"
-              className="block py-2 text-center text-gray-200 hover:text-gray-900"
-            >
-              About
-            </a>
-            <a
-              href="#skill"
-              className="block py-2 text-center text-gray-200 hover:text-gray-900"
-            >
-              Skills
-            </a>
-            <a
-              href="#portfolio"
-              className="block py-2 text-center text-gray-200 hover:text-gray-900"
-            >
-              Portfolio
-            </a>
-            <a
-              href="#contact"
-              className="block py-2 text-center text-gray-200 hover:text-gray-900"
-            >
-              Contact
-            </a>
-          </div>
         </div>
+      </div>
+
+      {/* Menu items untuk tampilan responsif */}
+      <div
+        className={`${
+          menuOpen ? "block" : "hidden"
+        } absolute top-16 right-4 left-4 md:top-auto md:right-auto md:relative flex flex-col bg-gradient-to-b from-yellow-300 to-slate-500 rounded-md p-4 shadow-md z-50`}
+      >
+        <a
+          href="#home"
+          className="block py-2 text-center text-gray-200 hover:text-gray-500"
+        >
+          Home
+        </a>
+        <a
+          href="#about"
+          className="block py-2 text-center text-gray-200 hover:text-gray-500"
+        >
+          About
+        </a>
+        <a
+          href="#skills"
+          className="block py-2 text-center text-gray-200 hover:text-gray-500"
+        >
+          Skills
+        </a>
+        <a
+          href="#education"
+          className="block py-2 text-center text-gray-200 hover:text-gray-500"
+        >
+          Education
+        </a>
+        <a
+          href="#certificate"
+          className="block py-2 text-center text-gray-200 hover:text-gray-500"
+        >
+          Certificate
+        </a>
+        <a
+          href="#project"
+          className="block py-2 text-center text-gray-200 hover:text-gray-500"
+        >
+          Project
+        </a>
+        <a
+          href="#contact"
+          className="block py-2 text-center text-gray-200 hover:text-gray-500"
+        >
+          Contact
+        </a>
       </div>
     </nav>
   );

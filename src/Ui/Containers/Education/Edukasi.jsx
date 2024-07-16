@@ -48,14 +48,14 @@ export default function Education(props) {
   return (
     <section id={id} className="py-8">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-semibold text-yellow-600 text-center mb-8">
+        <h2 className="text-4xl font-semibold hover:text-purple-500 cursor-pointer text-center mb-8">
           Education
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {educationData.map((edu, index) => (
             <div
               key={index}
-              className="bg-slate-400 border p-6 rounded-xl shadow-md"
+              className="bg-gray-900 border p-6 rounded-xl shadow-md"
             >
               <div className="flex rounded-md py-1 bg-black items-center px-4 max-w-[50%] md:max-w-[33%] mb-4">
                 <BsCalendar className="text-yellow-500 mr-2" />
@@ -69,15 +69,15 @@ export default function Education(props) {
                   {edu.type}
                 </span>
               </div>
-              <h4 className="text-xl mb-5 font-semibold">{edu.degree}</h4>
+              <h4 className="text-xl mb-5 text-white font-semibold">{edu.degree}</h4>
               <div className="flex items-center group">
                 <a
                   href={edu.mapsLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-1 py-1 px-2 group-hover:bg-slate-800 text-xs flex items-center rounded-3xl bg-sky-950"
+                  className="ml-1 py-1 px-2 group-hover:bg-slate-800 text-xs flex items-center rounded-3xl bg-gray-500"
                 >
-                  <FaMapMarkedAlt className="mr-1 text-black" /> <span className="group-hover:text-slate-500">View Location</span>
+                  <FaMapMarkedAlt className="mr-1 text-black group-hover:text-yellow-500" /> <span className="group-hover:text-yellow-500">View Location</span>
                 </a>
               </div>
             </div>
