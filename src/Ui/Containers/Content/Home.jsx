@@ -59,7 +59,7 @@ export default function Home(props) {
               <span className="font-serif">A</span> Front End Developer |
             </h2>
             <button
-              className="bg-yellow-500 mt-2 md:flex absolute inline-flex px-4 py-2 rounded shadow-lg hover:bg-yellow-600"
+              className="bg-yellow-500 mt-2 md:flex inline-flex px-4 py-2 rounded shadow-lg hover:bg-yellow-600"
               onClick={handleDownloadCV}
             >
               <GoDownload className="mt-1 mr-1" />
@@ -67,7 +67,7 @@ export default function Home(props) {
             </button>
           </div>
         </section>
-        <div className="relative md:ml-44 mt-7 flex flex-col items-center">
+        <div className="relative group md:ml-44 mt-7 flex flex-col items-center">
           <img
             className="w-60 h-60 md:w-[100%] md:h-96" // Responsive size
             src={Profile}
@@ -84,7 +84,7 @@ export default function Home(props) {
                 href={tech.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`absolute animate-float flex items-center md:px-2 p-1 bg-gradient-to-l from-slate-200 to-slate-300 shadow-lg rounded-full ${position}`}
+                className={`absolute animate-float group-hover:shadow-md group-hover:shadow-purple-500  flex items-center md:px-2 p-1 bg-gradient-to-l from-slate-200 to-slate-300 rounded-full ${position}`}
                 style={{
                   top: `${index * 20 + 20}%`,
                   transform: isLeft ? "translateX(-100%)" : "translateX(100%)",
@@ -99,7 +99,7 @@ export default function Home(props) {
                     alt={tech.name}
                   />
                 )}
-                <span className="text-xs md:text-sm text-black font-medium mr-2 md:mr-4">
+                <span className="text-xs group-hover:text-purple-500 md:text-sm text-black font-medium mr-2 md:mr-4">
                   {tech.name}
                 </span>
               </a>

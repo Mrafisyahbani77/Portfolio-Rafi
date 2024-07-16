@@ -20,10 +20,9 @@ export default function About(props) {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      // disable : "phone",
       easing: "ease-out-cubic",
     });
-  });
+  }, []);
 
   return (
     <main className="p-4 mt-24 mb-24 relative">
@@ -37,12 +36,12 @@ export default function About(props) {
         <div className="mx-3 relative text-center">
           <img
             data-aos="flip-left"
-            className="w-32 h-32 md:w-52 md:h-52 lg:w-54 lg:h-54 rounded-full mb-4" // Increased size and added margin bottom
+            className="w-32 h-32 md:w-52 md:h-52 lg:w-54 lg:h-54 rounded-full mb-4"
             src={profileImage}
             alt="Profile"
           />
           {love.map((fav, index) => {
-            const positionClass = index % 2 === 0 ? "left-14" : "right-14"; // Adjusted spacing
+            const positionClass = index % 2 === 0 ? "left-14" : "right-14";
             const verticalClass = index < 2 ? "top-1/4" : "top-2/3";
 
             return (
@@ -62,7 +61,7 @@ export default function About(props) {
                       alt={fav.name}
                     />
                   )}
-                  <span className="text-xs md:text-sm group-hover:text-purple-500  text-black font-semibold mr-2 md:mr-4">
+                  <span className="text-xs md:text-sm group-hover:text-purple-500 text-black font-semibold mr-2 md:mr-4">
                     {fav.name}
                   </span>
                 </section>
@@ -70,18 +69,12 @@ export default function About(props) {
             );
           })}
         </div>
-        <div className="mt-5 lg:mt-0 px-5  py-2 mx-3 lg:mx-0 lg:w-1/2 xl:w-1/3 flex justify-center bg-slate-300 rounded-2xl">
-          <article className="font-normal text-black">
-            Saya adalah seorang front-end developer yang sangat tertarik dan
-            bersemangat dalam mengembangkan aplikasi menggunakan JavaScript,
-            terutama dalam framework React.js. Selain itu, saya juga aktif
-            sebagai content creator di platform YouTube, di mana saya tidak
-            hanya berbagi tentang coding, tetapi juga membuat vlog dan konten
-            seputar game. Saya percaya bahwa kombinasi antara keterampilan
-            teknis dalam coding dan kemampuan untuk berbagi pengalaman dalam
-            berbagai topik dapat menginspirasi dan memberi nilai tambah bagi
-            komunitas yang saya dukung serta memperluas wawasan saya dalam
-            berbagai aspek konten digital.
+        <div className="mt-5 lg:mt-0 px-5 py-2 mx-3 lg:mx-0 lg:w-1/2 xl:w-1/3 flex justify-center bg-slate-300 rounded-2xl">
+          <article className="font-normal text-center text-black">
+            Saya siswa SMK Negeri 1 Ciomas dan seorang front-end developer yang
+            bersemangat mengembangkan aplikasi menggunakan FrameWork React.JS.
+            Selain coding, saya juga aktif di YouTube, berbagi tentang coding,
+            vlog, dan game.
           </article>
         </div>
       </div>
