@@ -1,6 +1,7 @@
 import Porto1 from "../../../assets/Images/Por1.png"
 import Porto2 from "../../../assets/Images/Por2.png"
 import Porto3 from "../../../assets/Images/Por3.png"
+import Porto4 from "../../../assets/Images/por4.png"
 
 const projects = [
   {
@@ -27,6 +28,14 @@ const projects = [
     image: Porto3, // Replace with actual image link or import
     bgColor: "bg-purple-900 text-white"
   },
+  {
+    title: "Movie List",
+    workedOn: ["Website"],
+    technologies: ["ReactJs", "Tailwind CSS"],
+    link: "https://movierafi.pages.dev/", // Replace with actual link
+    image: Porto4, // Replace with actual image link or import
+    bgColor: "bg-yellow-500 text-white"
+  },
 ];
 
 export default function Portfolio (props)  {
@@ -46,7 +55,7 @@ export default function Portfolio (props)  {
                 <p className="mb-4">Technologies I have used:</p>
                 <div className="flex flex-wrap mb-4">
                   {project.technologies.map((tech) => (
-                    <span key={tech} className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                    <span key={tech} className="bg-gray-200 hover:shadow-md cursor-pointer hover:shadow-purple-500 hover:text-yellow-500 hover:bg-black rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                       {tech}
                     </span>
                   ))}

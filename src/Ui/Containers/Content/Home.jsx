@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { GoDownload } from "react-icons/go";
 import Particle from "../../Components/Particle";
 import Profile from "../../../assets/Images/Rafi.png";
@@ -7,6 +7,7 @@ import Javascript from "../../../assets/Images/javascript.png";
 import Tailwindcss from "../../../assets/Images/tailwind.png";
 import { SiNextdotjs } from "react-icons/si";
 import Cv from "../../../assets/Certificate/Cv.pdf"; // Adjust path if necessary
+
 
 const technologies = [
   { name: "ReactJS", logo: Rea, url: "https://reactjs.org", isIcon: false },
@@ -42,11 +43,27 @@ export default function Home(props) {
     document.body.removeChild(a);
   };
 
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem("darkMode");
+    return savedMode ? JSON.parse(savedMode) : false;
+  });
+
+  useEffect(() => {
+    const darkModeClass = () => {
+      if (darkMode) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+      localStorage.setItem("darkMode", JSON.stringify(darkMode));
+    };
+    darkModeClass();
+  }, [darkMode]);
+
   return (
     <>
-      {" "}
       <Particle className="absolute inset-0 -z-10 " />
-      <div className=" flex md:flex-row flex-col items-center mt-20 px-4">
+      <div className="flex md:flex-row flex-col items-center mt-20 px-4">
         <section
           id={id}
           className="flex flex-col md:items-center md:justify-start text-center md:text-left p-6"
@@ -54,18 +71,20 @@ export default function Home(props) {
           <div className="mb-10 text-xl md:text-4xl font-semibold">
             Hello! I'm Muhammad Rafi Syahbani
           </div>
-          <div className="md:mr-auto ">
-            <h2 className=" font-semibold">
+          <div className="md:mr-auto">
+            <h2 className="font-semibold">
               <span className="font-serif">A</span> Front End Developer |
             </h2>
             <span className="group">
-            <button
-              className="bg-gray-900 mt-2 md:flex inline-flex px-4 py-2 rounded shadow-lg"
-              onClick={handleDownloadCV}
-            >
-              <GoDownload className="mt-1 mr-1 text-white group-hover:text-yellow-500" />
-             <text className="group-hover:text-yellow-500 text-white"> Download CV </text>
-            </button>
+              <button
+                className="bg-gray-900 mt-2 md:flex inline-flex px-4 py-2 rounded shadow-lg"
+                onClick={handleDownloadCV}
+              >
+                <GoDownload className="mt-1 mr-1 text-white group-hover:text-yellow-500" />
+                <h1 className="group-hover:text-yellow-500 text-white">
+                  Download CV
+                </h1>
+              </button>
             </span>
           </div>
         </section>
@@ -86,7 +105,7 @@ export default function Home(props) {
                 href={tech.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`absolute animate-float group-hover:shadow-md  group-hover:shadow-purple-500  flex items-center md:px-2 p-1 bg-gray-900 rounded-full ${position}`}
+                className={`absolute animate-float group-hover:shadow-md group-hover:shadow-purple-500 flex items-center md:px-2 p-1 bg-gray-900 rounded-full ${position}`}
                 style={{
                   top: `${index * 20 + 20}%`,
                   transform: isLeft ? "translateX(-100%)" : "translateX(100%)",
