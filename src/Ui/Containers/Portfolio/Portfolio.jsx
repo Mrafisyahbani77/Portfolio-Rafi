@@ -13,6 +13,14 @@ const projects = [
     bgColor: "bg-blue-900 text-white"
   },
   {
+    title: "Movie List",
+    workedOn: ["Website"],
+    technologies: ["ReactJs", "Tailwind CSS"],
+    link: "https://movierafi.pages.dev/", // Replace with actual link
+    image: Porto4, // Replace with actual image link or import
+    bgColor: "bg-yellow-500 text-white"
+  },
+  {
     title: "Pokemon",
     workedOn: ["Website"],
     technologies: ["Tailwind CSS", "ReactJS"],
@@ -27,14 +35,6 @@ const projects = [
     link: "https://naruto-all-characters.vercel.app/", // Replace with actual link
     image: Porto3, // Replace with actual image link or import
     bgColor: "bg-purple-900 text-white"
-  },
-  {
-    title: "Movie List",
-    workedOn: ["Website"],
-    technologies: ["ReactJs", "Tailwind CSS"],
-    link: "https://movierafi.pages.dev/", // Replace with actual link
-    image: Porto4, // Replace with actual image link or import
-    bgColor: "bg-yellow-500 text-white"
   },
 ];
 
