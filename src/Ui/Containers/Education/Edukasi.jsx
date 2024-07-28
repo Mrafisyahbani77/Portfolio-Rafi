@@ -1,7 +1,9 @@
-import React from "react";
+import {useEffect} from "react";
 import { BsCalendar } from "react-icons/bs";
 import { FaGraduationCap } from "react-icons/fa";
 import { FaMapMarkedAlt } from "react-icons/fa";
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 export default function Education(props) {
   const id = props.id;
@@ -45,6 +47,12 @@ export default function Education(props) {
     },
   ];
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+    });
+  }, []);
+
   return (
     <section id={id} className="py-8">
       <div className="container mx-auto px-4">
@@ -56,6 +64,7 @@ export default function Education(props) {
             <div
               key={index}
               className="bg-gray-900 border p-6 rounded-xl shadow-md"
+              data-aos="fade-up"
             >
               <div className="flex rounded-md py-1 bg-black items-center px-4 max-w-[50%] md:max-w-[33%] mb-4">
                 <BsCalendar className="text-yellow-500 mr-2" />

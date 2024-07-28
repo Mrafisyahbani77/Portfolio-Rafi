@@ -1,3 +1,6 @@
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Smk from "../../../assets/Images/smk.png";
 import Dcd from "../../../assets/Images/coding.jpeg";
 import Logic from "../../../assets/Certificate/Logic.pdf";
@@ -10,7 +13,7 @@ const Sertifik = [
   {
     id: 1,
     platform: "Dicoding",
-    title: " Pengenalan ke Logika Pemrograman (Programming Logic 101)",
+    title: "Pengenalan ke Logika Pemrograman (Programming Logic 101)",
     icon: Dcd,
     file: Logic,
   },
@@ -37,11 +40,16 @@ const Sertifik = [
     icon: Dcd,
     file: Grow,
   },
-  
 ];
 
 export default function Sertifikat(props) {
   const id = props.id;
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+    });
+  }, []);
 
   const handleViewCertificate = (file) => {
     window.open(file, "_blank");
@@ -57,25 +65,26 @@ export default function Sertifikat(props) {
           <div
             key={cert.id}
             className="border bg-gray-900 rounded-lg shadow-md p-4 m-2 items-center"
+            data-aos="fade-up" 
           >
             <span className="flex px-2 max-w-[70%] md:max-w-[32%] space-x-1 py-2 bg-black rounded-full">
               <img
                 src={cert.icon}
                 alt={`Ikon ${cert.platform}`}
-                className="w-7 h-7 md:w-10 md:h-10 bg-white rounded-full "
+                className="w-7 h-7 md:w-10 md:h-10 bg-white rounded-full"
               />
-              <h3 className="text-base md:mt-2 font-semibold text-yellow-600 ">
+              <h3 className="text-base md:mt-2 font-semibold text-yellow-600">
                 {cert.platform}
               </h3>
             </span>
             <p className="mt-4 font-bold text-white text-center mb-4">{cert.title}</p>
-            <span  className="group">
-            <button
-              className=" border hover:text-yellow-500 text-black bg-gray-500 border-gray-500 rounded-full px-4 py-2 hover:bg-gray-900"
-              onClick={() => handleViewCertificate(cert.file)}
-            >
-              Lihat
-            </button>
+            <span className="group">
+              <button
+                className="border hover:text-yellow-500 text-black bg-gray-500 border-gray-500 rounded-full px-4 py-2 hover:bg-gray-900"
+                onClick={() => handleViewCertificate(cert.file)}
+              >
+                Lihat
+              </button>
             </span>
             {cert.rapot && cert.Choice && (
               <button
