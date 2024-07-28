@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-gray-900 fixed w-full px-4 py-5 flex justify-between items-center z-50 top-0">
-      <div className="md:hidden flex items-center">
+      <div className="flex items-center md:hidden">
         <img
           className="cursor-pointer w-8 h-8"
           src={menuOpen ? Clos : Burger}
@@ -60,9 +60,9 @@ export default function Navbar() {
         </ul>
       </div>
 
-      <div className="flex items-center">
+      <div className="flex items-center ml-auto">
         <button
-          className="px-2 py-2 bg-black text-white rounded-full"
+          className="px-2 py-2 bg-black text-white rounded-full ml-4"
           onClick={toggleDarkMode}
         >
           {darkMode ? <FaSun /> : <FaMoon />}
