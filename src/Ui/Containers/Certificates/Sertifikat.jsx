@@ -79,7 +79,7 @@ export default function Sertifikat(props) {
             </span>
             {cert.rapot && cert.Choice && (
               <button
-                className="ml-2 bg-white border text-black border-gray-300 rounded-full px-4 py-2 hover:bg-gray-200"
+                className="ml-2 hover:text-yellow-500 text-black bg-gray-500 border border-gray-500 rounded-full px-4 py-2 hover:bg-gray-900"
                 onClick={() => handleViewCertificate(cert.rapot)}
               >
                 {cert.Choice}

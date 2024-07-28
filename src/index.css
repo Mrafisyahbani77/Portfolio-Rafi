@@ -14,20 +14,9 @@
     0 4px 6px -1px rgba(0, 206, 201, 0.7), 0 2px 4px -2px rgba(0, 206, 201, 0.7);
 }
 
-.navbar-fixed {
-  @apply fixed z-[9999] bg-opacity-60 backdrop-blur-lg shadow-lg;
-}
-
-.hamburger-menu {
-  @apply block w-[33px] h-[3px] bg-slate-300 my-2;
-}
-
-.hamburger-active > span:nth-child(1) {
-  @apply rotate-45;
-}
-.hamburger-active > span:nth-child(2) {
-  @apply scale-0;
-}
-.hamburger-active > span:nth-child(3) {
-  @apply -rotate-45;
+.typing-container {
+  overflow: hidden; /* Ensuring the text will be hidden after it goes out of the div */
+  border-right: 0px solid black; /* Cursor effect */
+  white-space: nowrap; /* Prevent the text from wrapping to the next line */
+  letter-spacing: 0px; /* Adjust as needed */
 }

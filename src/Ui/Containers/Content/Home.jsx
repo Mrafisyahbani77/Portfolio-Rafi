@@ -68,7 +68,7 @@ export default function Home(props) {
           id={id}
           className="flex flex-col md:items-center md:justify-start text-center md:text-left p-6"
         >
-          <div className="mb-10 text-xl md:text-4xl font-semibold">
+          <div className="mb-10 text-xl md:text-4xl typing-container inline-block animate-typing font-semibold">
             Hello! I'm Muhammad Rafi Syahbani
           </div>
           <div className="md:mr-auto">
