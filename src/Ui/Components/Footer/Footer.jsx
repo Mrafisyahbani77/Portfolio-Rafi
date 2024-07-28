@@ -24,35 +24,34 @@ const Footer = () => {
             className="mx-3 w-16 h-16 md:min-w-52 md:h-32"
             src={Logo}
             alt="Rafi"
+            loading="lazy"
           />
         </div>
         <div className="w-full md:w-2/3">
           <div className="flex flex-col items-center md:flex-r md:justify-between border-b border-gray-700 pb-4 mb-8">
             <div className="flex flex-wrap justify-center space-x-4 md:space-x-6 mb-4 md:mb-0">
-              
-                <a href="#home" className="hover:text-gray-400">
-                  Home
-                </a>
-                <a href="#about" className="hover:text-gray-400">
-                  About
-                </a>
-                <a href="#skils" className="hover:text-gray-400">
-                  Skills
-                </a>
-                <a href="#project" className="hover:text-gray-400">
-                  Project
-                </a>
-                <a href="#contact" className="hover:text-gray-400">
-                  Contact
-                </a>
-                <a href="#serti" className="hover:text-gray-400">
-                  Certificate
-                </a>
-                <a href="#Edukasi" className="hover:text-gray-400">
-                  Education
-                </a>
-              </div>
-            
+              <a href="#home" className="hover:text-gray-400">
+                Home
+              </a>
+              <a href="#about" className="hover:text-gray-400">
+                About
+              </a>
+              <a href="#skills" className="hover:text-gray-400">
+                Skills
+              </a>
+              <a href="#project" className="hover:text-gray-400">
+                Project
+              </a>
+              <a href="#contact" className="hover:text-gray-400">
+                Contact
+              </a>
+              <a href="#certificate" className="hover:text-gray-400">
+                Certificate
+              </a>
+              <a href="#education" className="hover:text-gray-400">
+                Education
+              </a>
+            </div>
           </div>
           <div className="flex justify-center space-x-4 mb-4">
             {socialMediaLinks.map((link, index) => (
@@ -61,6 +60,7 @@ const Footer = () => {
                   src={link.icon}
                   alt={link.name}
                   className="w-7 h-7 bg-black rounded-full py-1 px-1"
+                  loading="lazy"
                 />
               </a>
             ))}

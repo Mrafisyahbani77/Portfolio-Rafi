@@ -29,6 +29,7 @@ const Particle = ({
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      cancelAnimationFrame(animationFrameId.current); // Cleanup animasi
     };
   }, []);
 
@@ -134,6 +135,8 @@ const Particle = ({
     return remapped > 0 ? remapped : 0;
   };
 
+  const animationFrameId = useRef(null);
+
   const animate = () => {
     clearContext();
     circles.current.forEach((circle, i) => {
@@ -181,7 +184,7 @@ const Particle = ({
         );
       }
     });
-    window.requestAnimationFrame(animate);
+    animationFrameId.current = window.requestAnimationFrame(animate);
   };
 
   const handleResize = () => {

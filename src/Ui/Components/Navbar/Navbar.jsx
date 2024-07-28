@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Clos from "../../../assets/Images/ttp.png";
 import Burger from "../../../assets/Images/bgr.png";
-import { FaMoon } from "react-icons/fa";
-import { FaSun } from "react-icons/fa";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,7 +25,6 @@ export default function Navbar() {
 
   return (
     <nav className="bg-gray-900 fixed w-full px-4 py-5 flex justify-between items-center z-50 top-0">
-      {/* Hamburger Menu for Responsive View */}
       <div className="md:hidden flex items-center">
         <img
           className="cursor-pointer w-8 h-8"
@@ -36,9 +34,7 @@ export default function Navbar() {
         />
       </div>
 
-      {/* Container for centering */}
       <div className="flex items-center justify-center flex-grow">
-        {/* Menu untuk tampilan desktop */}
         <ul className="hidden md:flex space-x-5 text-lg font-mono">
           <li className="hover:bg-gray-700 rounded-md px-2 py-1 text-gray-100">
             <a href="#home">Home</a>
@@ -64,7 +60,6 @@ export default function Navbar() {
         </ul>
       </div>
 
-      {/* Tombol Dark Mode */}
       <div className="flex items-center">
         <button
           className="px-2 py-2 bg-black text-white rounded-full"
@@ -74,11 +69,10 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Menu items untuk tampilan responsif */}
       <div
         className={`${
           menuOpen ? "block" : "hidden"
-        } absolute top-16 left-4 right-4 md:top-auto md:left-auto md:right-auto md:relative flex flex-col bg-gray-900 rounded-md p-4 shadow-md z-50`}
+        } absolute top-16 left-0 right-0 md:top-auto md:left-auto md:right-auto md:relative flex flex-col bg-gray-900 rounded-md p-4 shadow-md z-50`}
       >
         <a
           href="#home"
