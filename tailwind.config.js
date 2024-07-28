@@ -24,7 +24,7 @@ module.exports = {
       },
       animation: {
         float: "float 3s ease-in-out infinite",
-        fadeIn: "fadeIn 2s ease-in-out",
+        fadeIn: "fadeIn 1s ease-in-out",
         typing: "typing 4s steps(40, end), blink-caret .75s step-end infinite",
       },
       colors: {

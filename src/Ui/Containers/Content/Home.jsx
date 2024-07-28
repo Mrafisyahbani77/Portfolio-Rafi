@@ -8,7 +8,6 @@ import Tailwindcss from "../../../assets/Images/tailwind.png";
 import { SiNextdotjs } from "react-icons/si";
 import Cv from "../../../assets/Certificate/Cv.pdf"; // Adjust path if necessary
 
-
 const technologies = [
   { name: "ReactJS", logo: Rea, url: "https://reactjs.org", isIcon: false },
   {
@@ -43,23 +42,6 @@ export default function Home(props) {
     document.body.removeChild(a);
   };
 
-  const [darkMode, setDarkMode] = useState(() => {
-    const savedMode = localStorage.getItem("darkMode");
-    return savedMode ? JSON.parse(savedMode) : false;
-  });
-
-  useEffect(() => {
-    const darkModeClass = () => {
-      if (darkMode) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-      localStorage.setItem("darkMode", JSON.stringify(darkMode));
-    };
-    darkModeClass();
-  }, [darkMode]);
-
   return (
     <>
       <Particle className="absolute inset-0 -z-10 " />
@@ -73,8 +55,8 @@ export default function Home(props) {
           </div>
           <div className="md:mr-auto">
             <h2 className="font-semibold space-x-2">
-              <span className="font-serif">A</span> Front End Developer |
-              Junior Web Developer
+              <span className="font-serif">A</span> Front End Developer | Junior
+              Web Developer
             </h2>
             <span className="group">
               <button
@@ -91,7 +73,7 @@ export default function Home(props) {
         </section>
         <div className="relative group md:ml-44 mt-7 flex flex-col items-center">
           <img
-            className="w-60 h-60 md:w-[100%] md:h-96" // Responsive size
+            className="w-60 h-60 md:w-[100%] md:h-96"
             src={Profile}
             alt="Profile"
           />
