@@ -36,7 +36,7 @@ const Footer = () => {
               <a href="#about" className="hover:text-gray-400">
                 About
               </a>
-              <a href="#skills" className="hover:text-gray-400">
+              <a href="#skils" className="hover:text-gray-400">
                 Skills
               </a>
               <a href="#project" className="hover:text-gray-400">
@@ -45,10 +45,10 @@ const Footer = () => {
               <a href="#contact" className="hover:text-gray-400">
                 Contact
               </a>
-              <a href="#certificate" className="hover:text-gray-400">
+              <a href="#serti" className="hover:text-gray-400">
                 Certificate
               </a>
-              <a href="#education" className="hover:text-gray-400">
+              <a href="#Edukasi" className="hover:text-gray-400">
                 Education
               </a>
             </div>
