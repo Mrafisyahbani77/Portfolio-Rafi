@@ -49,7 +49,7 @@ export default function About(props) {
   return (
     <main className="p-4 mt-24 mb-24 relative">
       <div className="mt-28 text-center group font-semibold text-3xl" id={id}>
-        <span className="cursor-pointer group-hover:text-purple-500">
+        <span className="cursor-pointer group-hover:text-purple-500 transition-colors duration-300 ease-in-out">
           About Me
         </span>
       </div>
@@ -72,9 +72,9 @@ export default function About(props) {
                   index % 2 === 0 ? "-translate-x-28" : "translate-x-28"
                 } mt-4`}
               >
-                <section className="flex cursor-pointer group-hover:shadow-md group-hover:shadow-purple-500 items-center p-2 md:p-1 bg-gray-900 rounded-full animate-float">
+                <section className="flex cursor-pointer group-hover:shadow-md group-hover:shadow-purple-500 items-center p-2 md:p-1 bg-gray-900 rounded-full animate-float transition-all duration-300 ease-in-out">
                   {fav.isIcon ? (
-                    <fav.logo className="w-3 h-3 group-hover:text-purple-500 text-gray-400 md:w-6 md:h-6 mx-1" />
+                    <fav.logo className="w-3 h-3 group-hover:text-purple-500 text-gray-400 md:w-6 md:h-6 mx-1 transition-colors duration-300 ease-in-out" />
                   ) : (
                     <img
                       className="w-3 h-3 md:w-6 md:h-6 mx-1"
@@ -82,7 +82,7 @@ export default function About(props) {
                       alt={fav.name}
                     />
                   )}
-                  <span className="text-xs md:text-sm group-hover:text-purple-500 text-white font-semibold mr-2 md:mr-4">
+                  <span className="text-xs md:text-sm group-hover:text-purple-500 text-white font-semibold mr-2 md:mr-4 transition-colors duration-300 ease-in-out">
                     {fav.name}
                   </span>
                 </section>

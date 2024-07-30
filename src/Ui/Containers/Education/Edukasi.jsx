@@ -41,7 +41,7 @@ export default function Education(props) {
       degree: "SMK Negri 1 Ciomas",
       location:
         "Perum bukit asri, Pagelaran, Kec. Ciomas, Kabupaten Bogor, Jawa Barat",
-      type: "Graduation",
+      type: "Student",
       typeIcon: FaGraduationCap,
       mapsLink: "https://maps.app.goo.gl/CP5AY5TxEjtA6JWP6",
     },
