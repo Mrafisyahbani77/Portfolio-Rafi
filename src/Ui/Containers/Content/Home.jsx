@@ -6,7 +6,7 @@ import Rea from "../../../assets/Images/Rea.png";
 import Javascript from "../../../assets/Images/javascript.png";
 import Tailwindcss from "../../../assets/Images/tailwind.png";
 import { SiNextdotjs } from "react-icons/si";
-import Cv from "../../../assets/Certificate/Cv.pdf"; 
+import Cv from "../../../assets/Certificate/Cv.pdf";
 
 const technologies = [
   { name: "ReactJS", logo: Rea, url: "https://reactjs.org", isIcon: false },
@@ -35,8 +35,8 @@ export default function Home(props) {
 
   const handleDownloadCV = () => {
     const a = document.createElement("a");
-    a.href = Cv; 
-    a.download = "cv.pdf"; 
+    a.href = Cv;
+    a.download = "cv.pdf";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -50,12 +50,12 @@ export default function Home(props) {
           id={id}
           className="flex flex-col md:items-center md:justify-start text-center md:text-left p-6"
         >
-          <div className="mb-10 text-lg md:text-md lg:text-4xl typing-container inline-block animate-typing font-semibold">
+          <div className="mb-5 text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-yellow-400 to-purple-400 text-lg md:text-md lg:text-4xl typing-container inline-block animate-typing font-bold">
             Hello! I'm Muhammad Rafi Syahbani
           </div>
           <div className="md:mr-auto">
-            <h2 className="font-semibold text-xs md:tetx-md space-x-2">
-              <span className="font-serif">A</span> Front End Developer | Junior
+            <h2 className="font-semibold text-transparent bg-clip-text bg-gradient-to-l from-purple-500 via-purple-400 to-yellow-500 text-xs md:tetx-md space-x-2">
+              <span className="font-serif text-yellow-500">A</span> Front End Developer | Junior
               Web Developer
             </h2>
             <span className="group">
@@ -71,7 +71,7 @@ export default function Home(props) {
             </span>
           </div>
         </section>
-        <div className="relative group md:ml-44 mt-7 flex flex-col items-center">
+        <div className="relative md:ml-44 mt-7 flex flex-col items-center">
           <img
             className="w-60 h-60 lg:mr-20 md:w-[100%] md:h-96"
             src={Profile}
@@ -83,30 +83,33 @@ export default function Home(props) {
               ? "left-0 md:-left-25 lg:-left-20"
               : "right-0 md:-right-25 lg:-right-25";
             return (
-              <a
-                key={index}
-                href={tech.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`absolute animate-float group-hover:shadow-md group-hover:shadow-purple-500 flex items-center md:px-2 p-1 bg-gray-900 rounded-full ${position}`}
-                style={{
-                  top: `${index * 20 + 20}%`,
-                  transform: isLeft ? "translateX(-100%)" : "translateX(100%)",
-                }}
-              >
-                {tech.isIcon ? (
-                  <tech.logo className="w-6 md:py-1 md:px-1 h-6 text-gray-600 md:w-8 md:h-8 mx-1 cursor-pointer" />
-                ) : (
-                  <img
-                    className="w-6 h-6 md:w-7 md:h-8 mx-1 cursor-pointer"
-                    src={tech.logo}
-                    alt={tech.name}
-                  />
-                )}
-                <span className="text-xs group-hover:text-purple-500 md:text-sm text-white font-medium mr-2 md:mr-4">
-                  {tech.name}
-                </span>
-              </a>
+              <div key={index} className="group">
+                <a
+                  href={tech.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`absolute animate-float group-hover:shadow-md group-hover:shadow-purple-500 flex items-center md:px-2 p-1 bg-gray-900 rounded-full ${position}`}
+                  style={{
+                    top: `${index * 20 + 20}%`,
+                    transform: isLeft
+                      ? "translateX(-100%)"
+                      : "translateX(100%)",
+                  }}
+                >
+                  {tech.isIcon ? (
+                    <tech.logo className="w-6 md:py-1 md:px-1 h-6 text-gray-600 md:w-8 md:h-8 mx-1 cursor-pointer" />
+                  ) : (
+                    <img
+                      className="w-6 h-6 md:w-7 md:h-8 mx-1 cursor-pointer"
+                      src={tech.logo}
+                      alt={tech.name}
+                    />
+                  )}
+                  <span className="text-xs group-hover:text-purple-500 md:text-sm text-white font-medium mr-2 md:mr-4">
+                    {tech.name}
+                  </span>
+                </a>
+              </div>
             );
           })}
         </div>

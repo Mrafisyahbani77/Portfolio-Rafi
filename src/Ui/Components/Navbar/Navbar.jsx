@@ -11,11 +11,14 @@ export default function Navbar() {
   });
 
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
+     if (darkMode) {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light-mode');
     } else {
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.remove('light-mode');
+      document.documentElement.classList.add('dark');
     }
+
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
   }, [darkMode]);
 
@@ -36,25 +39,25 @@ export default function Navbar() {
 
       <div className="flex items-center justify-center flex-grow">
         <ul className="hidden md:flex space-x-5 text-lg font-mono">
-          <li className="hover:bg-gray-700 rounded-md px-2 py-1 text-gray-100">
+          <li className="hover:text-yellow-500 hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
             <a href="#home">Home</a>
           </li>
-          <li className="hover:bg-gray-700 rounded-md px-2 py-1 text-gray-100">
+          <li className="hover:text-yellow-500 hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
             <a href="#about">About</a>
           </li>
-          <li className="hover:bg-gray-700 rounded-md px-2 py-1 text-gray-100">
+          <li className="hover:text-yellow-500 hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
             <a href="#skils">Skills</a>
           </li>
-          <li className="hover:bg-gray-700 rounded-md px-2 py-1 text-gray-100">
+          <li className="hover:text-yellow-500 hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
             <a href="#Edukasi">Education</a>
           </li>
-          <li className="hover:bg-gray-700 rounded-md px-2 py-1 text-gray-100">
+          <li className="hover:text-yellow-500 hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
             <a href="#serti">Certificate</a>
           </li>
-          <li className="hover:bg-gray-700 rounded-md px-2 py-1 text-gray-100">
+          <li className="hover:text-yellow-500 hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
             <a href="#project">Project</a>
           </li>
-          <li className="hover:bg-gray-700 rounded-md px-2 py-1 text-gray-100">
+          <li className="hover:text-yellow-500 hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
             <a href="#contact">Contact</a>
           </li>
         </ul>

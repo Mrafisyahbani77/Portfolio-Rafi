@@ -33,6 +33,8 @@ module.exports = {
         secondary: "#19376d",
         dark: "#0b2447",
         bg: "#04152d",
+        dark: '#1a1a1a', // Warna gelap yang diinginkan
+        light: '#EEEEEE', // Warna slate untuk mode terang
       },
     },
   },
