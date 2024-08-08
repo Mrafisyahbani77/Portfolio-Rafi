@@ -17,7 +17,7 @@ const socialMediaLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-8">
+    <footer className=" bg-gray-900 text-white py-8">
       <div className="container mx-auto flex flex-col md:flex-row md:justify-between md:items-start">
         <div className="mb-8 md:flex md:mb-0 md:text-left hidden md:w-1/3">
           <img

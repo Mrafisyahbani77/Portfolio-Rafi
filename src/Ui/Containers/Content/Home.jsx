@@ -73,7 +73,7 @@ export default function Home(props) {
         </section>
         <div className="relative group md:ml-44 mt-7 flex flex-col items-center">
           <img
-            className="w-60 h-60 mr-10 md:w-[100%] md:h-96"
+            className="w-60 h-60 lg:mr-20 md:w-[100%] md:h-96"
             src={Profile}
             alt="Profile"
           />
@@ -81,7 +81,7 @@ export default function Home(props) {
             const isLeft = index < 2;
             const position = isLeft
               ? "left-0 md:-left-25 lg:-left-20"
-              : "right-0 md:-right-25";
+              : "right-0 md:-right-25 lg:-right-25";
             return (
               <a
                 key={index}
