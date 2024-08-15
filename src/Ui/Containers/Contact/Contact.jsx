@@ -36,7 +36,7 @@ export default function Contact(props) {
   };
 
   return (
-    <div
+    <main
       id={id}
       className="min-h-screen flex md:mt-4 mt-2 flex-col items-center justify-center px-4"
     >
@@ -102,6 +102,6 @@ export default function Contact(props) {
           </button>
         </form>
       </div>
-    </div>
+    </main>
   );
 }

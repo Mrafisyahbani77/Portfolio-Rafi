@@ -56,7 +56,7 @@ export default function Sertifikat(props) {
   };
 
   return (
-    <div id={id} className="min-h-screen p-4 sm:p-8">
+    <main id={id} className="min-h-screen p-4 sm:p-8">
       <h1 className="text-4xl font-semibold transition duration-300 ease-in-out hover:text-purple-500 cursor-pointer text-center mb-8">
         Sertifikat
       </h1>
@@ -100,6 +100,6 @@ export default function Sertifikat(props) {
           </div>
         ))}
       </div>
-    </div>
+    </main>
   );
 }

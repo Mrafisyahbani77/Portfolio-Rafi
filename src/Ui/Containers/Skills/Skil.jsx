@@ -72,7 +72,7 @@ export default function Skil(props) {
   }, []);
 
   return (
-    <div id={id} className="mb-20  mt-8 flex flex-col items-center py-10">
+    <main id={id} className="mb-20  mt-8 flex flex-col items-center py-10">
       <h1 className="text-4xl transition duration-300 ease-in-out hover:text-purple-500 cursor-pointer font-bold mb-14">
         Skills
       </h1>
@@ -92,6 +92,6 @@ export default function Skil(props) {
           ))}
         </div>
       </section>
-    </div>
+    </main>
   );
 }

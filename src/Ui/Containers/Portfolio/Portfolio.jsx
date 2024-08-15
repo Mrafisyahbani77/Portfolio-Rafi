@@ -63,7 +63,7 @@ export default function Portfolio(props) {
   }, []);
 
   return (
-    <div id={id} className="container mx-auto p-4">
+    <main id={id} className="container mx-auto p-4">
        <h1 className="text-4xl font-semibold transition duration-300 ease-in-out hover:text-purple-500 cursor-pointer text-center mb-20">
         Project
       </h1>
@@ -105,6 +105,6 @@ export default function Portfolio(props) {
           </div>
         ))}
       </div>
-    </div>
+    </main>
   );
 }

@@ -48,7 +48,7 @@ const Footer = () => {
               <a href="#serti" className="hover:text-gray-400">
                 Certificate
               </a>
-              <a href="#Edukasi" className="hover:text-gray-400 mt-3">
+              <a href="#Edukasi" className="hover:text-gray-400">
                 Education
               </a>
             </div>

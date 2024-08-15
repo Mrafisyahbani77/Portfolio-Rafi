@@ -61,13 +61,13 @@ export default function Navbar() {
             <a href="#about">About</a>
           </li>
           <li className="hover:text-yellow-500 transition duration-300 ease-in-out hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
-            <a href="#skills">Skills</a>
+            <a href="#skils">Skills</a>
           </li>
           <li className="hover:text-yellow-500 transition duration-300 ease-in-out hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
-            <a href="#education">Education</a>
+            <a href="#Edukasi">Education</a>
           </li>
           <li className="hover:text-yellow-500 transition duration-300 ease-in-out hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
-            <a href="#certificate">Certificate</a>
+            <a href="#serti">Certificate</a>
           </li>
           <li className="hover:text-yellow-500 transition duration-300 ease-in-out hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
             <a href="#project">Project</a>
@@ -105,19 +105,19 @@ export default function Navbar() {
           About
         </a>
         <a
-          href="#skills"
+          href="#skils"
           className="block transition hover:text-yellow-500 duration-300 ease-in-out py-1 text-center text-gray-200 hover:bg-gray-700/70 rounded-md"
         >
           Skills
         </a>
         <a
-          href="#education"
+          href="#Edukasi"
           className="block transition hover:text-yellow-500 duration-300 ease-in-out py-1 text-center text-gray-200 hover:bg-gray-700/70 rounded-md"
         >
           Education
         </a>
         <a
-          href="#certificate"
+          href="#serti"
           className="block transition hover:text-yellow-500 duration-300 ease-in-out py-1 text-center text-gray-200 hover:bg-gray-700/70 rounded-md"
         >
           Certificate

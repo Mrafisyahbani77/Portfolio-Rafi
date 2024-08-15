@@ -54,7 +54,7 @@ export default function Education(props) {
   }, []);
 
   return (
-    <section id={id} className="py-8">
+    <main id={id} className="py-8">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-semibold transition duration-300 ease-in-out hover:text-purple-500 cursor-pointer text-center mb-8">
           Education
@@ -93,6 +93,6 @@ export default function Education(props) {
           ))}
         </div>
       </div>
-    </section>
+    </main>
   );
 }
