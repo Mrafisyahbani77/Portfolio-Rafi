@@ -46,8 +46,8 @@
 }
 
 .text-glow {
-  color: yellow;
-  transition: color 1s ease-in-out;
+  color: rgba(137, 255, 27, 0.982);
+  transition: color 2s ease-in-out;
 }
 
 .navbar-fixed {

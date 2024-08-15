@@ -56,7 +56,7 @@ export default function Education(props) {
   return (
     <section id={id} className="py-8">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-semibold hover:text-purple-500 cursor-pointer text-center mb-8">
+        <h2 className="text-4xl font-semibold transition duration-300 ease-in-out hover:text-purple-500 cursor-pointer text-center mb-8">
           Education
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -84,9 +84,9 @@ export default function Education(props) {
                   href={edu.mapsLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-1 py-1 px-2 group-hover:bg-slate-800 text-xs flex items-center rounded-3xl bg-gray-500"
+                  className="ml-1 transition duration-300 ease-in-out py-1 px-2 group-hover:bg-slate-600 text-xs flex items-center rounded-3xl bg-yellow-500"
                 >
-                  <FaMapMarkedAlt className="mr-1 text-black group-hover:text-yellow-500" /> <span className="group-hover:text-yellow-500">View Location</span>
+                  <FaMapMarkedAlt className="mr-1 transition duration-300  ease-in-out text-black group-hover:text-yellow-500" /> <span className="group-hover:text-yellow-500 text-black">View Location</span>
                 </a>
               </div>
             </div>

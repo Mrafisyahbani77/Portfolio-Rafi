@@ -11,12 +11,27 @@ export default function Navbar() {
   });
 
   useEffect(() => {
-     if (darkMode) {
-      document.documentElement.classList.remove('dark');
-      document.documentElement.classList.add('light-mode');
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    
+    // Bersihkan event listener saat komponen di-unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light-mode");
     } else {
-      document.documentElement.classList.remove('light-mode');
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.remove("light-mode");
+      document.documentElement.classList.add("dark");
     }
 
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
@@ -39,25 +54,25 @@ export default function Navbar() {
 
       <div className="flex items-center justify-center flex-grow">
         <ul className="hidden md:flex space-x-5 text-lg font-mono">
-          <li className="hover:text-yellow-500 hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
+          <li className="hover:text-yellow-500 transition duration-300 ease-in-out hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
             <a href="#home">Home</a>
           </li>
-          <li className="hover:text-yellow-500 hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
+          <li className="hover:text-yellow-500 transition duration-300 ease-in-out hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
             <a href="#about">About</a>
           </li>
-          <li className="hover:text-yellow-500 hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
-            <a href="#skils">Skills</a>
+          <li className="hover:text-yellow-500 transition duration-300 ease-in-out hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
+            <a href="#skills">Skills</a>
           </li>
-          <li className="hover:text-yellow-500 hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
-            <a href="#Edukasi">Education</a>
+          <li className="hover:text-yellow-500 transition duration-300 ease-in-out hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
+            <a href="#education">Education</a>
           </li>
-          <li className="hover:text-yellow-500 hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
-            <a href="#serti">Certificate</a>
+          <li className="hover:text-yellow-500 transition duration-300 ease-in-out hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
+            <a href="#certificate">Certificate</a>
           </li>
-          <li className="hover:text-yellow-500 hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
+          <li className="hover:text-yellow-500 transition duration-300 ease-in-out hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
             <a href="#project">Project</a>
           </li>
-          <li className="hover:text-yellow-500 hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
+          <li className="hover:text-yellow-500 transition duration-300 ease-in-out hover:bg-gray-800 rounded-md px-2 py-1 text-gray-100">
             <a href="#contact">Contact</a>
           </li>
         </ul>
@@ -75,47 +90,47 @@ export default function Navbar() {
       <div
         className={`${
           menuOpen ? "block" : "hidden"
-        } absolute top-16 left-0 right-0 md:top-auto md:left-auto md:right-auto md:relative flex flex-col bg-gray-900 rounded-md p-4 shadow-md z-50`}
+        } absolute top-16 left-0 right-0 gap-10 md:top-auto md:left-auto md:right-auto md:relative flex flex-col bg-gray-900/70 rounded-md p-4 shadow-md z-50`}
       >
         <a
           href="#home"
-          className="block py-2 text-center text-gray-200 hover:bg-gray-700 rounded-md"
+          className="block transition hover:text-yellow-500 duration-300 ease-in-out py-1 text-center text-gray-200 hover:bg-gray-700/70 rounded-md"
         >
           Home
         </a>
         <a
           href="#about"
-          className="block py-2 text-center text-gray-200 hover:bg-gray-700 rounded-md"
+          className="block transition hover:text-yellow-500 duration-300 ease-in-out py-1 text-center text-gray-200 hover:bg-gray-700/70 rounded-md"
         >
           About
         </a>
         <a
-          href="#skils"
-          className="block py-2 text-center text-gray-200 hover:bg-gray-700 rounded-md"
+          href="#skills"
+          className="block transition hover:text-yellow-500 duration-300 ease-in-out py-1 text-center text-gray-200 hover:bg-gray-700/70 rounded-md"
         >
           Skills
         </a>
         <a
-          href="#Edukasi"
-          className="block py-2 text-center text-gray-200 hover:bg-gray-700 rounded-md"
+          href="#education"
+          className="block transition hover:text-yellow-500 duration-300 ease-in-out py-1 text-center text-gray-200 hover:bg-gray-700/70 rounded-md"
         >
           Education
         </a>
         <a
-          href="#serti"
-          className="block py-2 text-center text-gray-200 hover:bg-gray-700 rounded-md"
+          href="#certificate"
+          className="block transition hover:text-yellow-500 duration-300 ease-in-out py-1 text-center text-gray-200 hover:bg-gray-700/70 rounded-md"
         >
           Certificate
         </a>
         <a
           href="#project"
-          className="block py-2 text-center text-gray-200 hover:bg-gray-700 rounded-md"
+          className="block transition hover:text-yellow-500 duration-300 ease-in-out py-1 text-center text-gray-200 hover:bg-gray-700/70 rounded-md"
         >
           Project
         </a>
         <a
           href="#contact"
-          className="block py-2 text-center text-gray-200 hover:bg-gray-700 rounded-md"
+          className="block transition hover:text-yellow-500 duration-300 ease-in-out py-1 text-center text-gray-200 hover:bg-gray-700/70 rounded-md"
         >
           Contact
         </a>

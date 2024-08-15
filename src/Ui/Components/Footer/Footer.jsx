@@ -48,7 +48,7 @@ const Footer = () => {
               <a href="#serti" className="hover:text-gray-400">
                 Certificate
               </a>
-              <a href="#Edukasi" className="hover:text-gray-400">
+              <a href="#Edukasi" className="hover:text-gray-400 mt-3">
                 Education
               </a>
             </div>
@@ -59,7 +59,7 @@ const Footer = () => {
                 <img
                   src={link.icon}
                   alt={link.name}
-                  className="w-7 h-7 bg-black rounded-full py-1 px-1"
+                  className="w-7 h-7 transition duration-300 ease-in-out bg-black rounded-full py-1 px-1 filter grayscale hover:filter-none focus:filter-none"
                   loading="lazy"
                 />
               </a>

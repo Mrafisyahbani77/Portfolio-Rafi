@@ -72,8 +72,8 @@ export default function Skil(props) {
   }, []);
 
   return (
-    <div id={id} className="mb-20 mt-8 flex flex-col items-center py-10">
-      <h1 className="text-4xl hover:text-purple-500 cursor-pointer font-bold mb-14">
+    <div id={id} className="mb-20  mt-8 flex flex-col items-center py-10">
+      <h1 className="text-4xl transition duration-300 ease-in-out hover:text-purple-500 cursor-pointer font-bold mb-14">
         Skills
       </h1>
       <section ref={skillsRef} className="w-4/5 md:w-2/3 lg:w-1/2">
@@ -84,10 +84,10 @@ export default function Skil(props) {
               href={tech.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex hover:shadow-md hover:shadow-purple-500 items-center space-x-2 p-2 bg-gray-900 rounded"
+              className="transition duration-300 ease-in-out flex hover:shadow-md group hover:shadow-purple-500 items-center space-x-2 p-2 bg-gray-900 rounded"
             >
               {tech.icon}
-              <span className="hover:text-purple-500">{tech.name}</span>
+              <span className="transition duration-300 ease-in-out group-hover:text-purple-500">{tech.name}</span>
             </a>
           ))}
         </div>

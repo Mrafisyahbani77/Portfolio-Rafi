@@ -73,7 +73,7 @@ export default function Home(props) {
         </section>
         <div className="relative md:ml-44 mt-7 flex flex-col items-center">
           <img
-            className="w-60 h-60 lg:mr-20 md:w-[100%] md:h-96"
+            className="w-60 h-60 lg:mr-20 md:w-[100%] md:h-96  lg:aspect-[4/3] md:aspect-[3/2] sm:w-[100%] sm:aspect-square"
             src={Profile}
             alt="Profile"
           />
@@ -88,7 +88,7 @@ export default function Home(props) {
                   href={tech.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`absolute animate-float group-hover:shadow-md group-hover:shadow-purple-500 flex items-center md:px-2 p-1 bg-gray-900 rounded-full ${position}`}
+                  className={`absolute animate-float transition duration-300 ease-in-out group-hover:shadow-md group-hover:shadow-purple-500 flex items-center md:px-2 p-1 bg-gray-900 rounded-full ${position}`}
                   style={{
                     top: `${index * 20 + 20}%`,
                     transform: isLeft
@@ -105,7 +105,7 @@ export default function Home(props) {
                       alt={tech.name}
                     />
                   )}
-                  <span className="text-xs group-hover:text-purple-500 md:text-sm text-white font-medium mr-2 md:mr-4">
+                  <span className="text-xs transition duration-300 ease-in-out group-hover:text-purple-500 md:text-sm text-white font-medium mr-2 md:mr-4">
                     {tech.name}
                   </span>
                 </a>
