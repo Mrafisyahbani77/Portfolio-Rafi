@@ -6,6 +6,7 @@ import Porto2 from "../../../assets/Images/Por2.png";
 import Porto3 from "../../../assets/Images/Por3.png";
 import Porto4 from "../../../assets/Images/por4.png";
 import Porto5 from "../../../assets/Images/Por5.png";
+import Porto6 from "../../../assets/Images/pkl.png";
 
 const projects = [
   {
@@ -15,6 +16,14 @@ const projects = [
     link: "https://website-al-quran.vercel.app/",
     image: Porto1,
     bgColor: "bg-green-600 text-white",
+  },
+  {
+    title: "Sistem Pengajuan Pkl",
+    workedOn: ["Website"],
+    technologies: ["Tailwind CSS", "ReactJS", "Laravel"],
+    link: "https://pklpplgskanic.pplgsmkn1ciomas.my.id/",
+    image: Porto6,
+    bgColor: "bg-blue-600 text-white",
   },
   {
     title: "Movie List",
